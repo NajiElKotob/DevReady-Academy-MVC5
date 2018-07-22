@@ -35,6 +35,8 @@ namespace DevReadyAcademy
             contentCss.Include("~/Content/Site.css", new CssRewriteUrlTransform());
             bundles.Add(contentCss);
 
+            // Bundling and Minification
+            // https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification
             BundleTable.EnableOptimizations = true;
         }
     }
