@@ -1,28 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using DevReadyAcademy.Models;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using DevReadyAcademy.Models;
+
+/*
+Responses Types:
+ Ok
+ NotFound
+ Exception
+ Unauthorized
+ BadRequest
+ Conflict
+ Redirect
+*/
 
 namespace DevReadyAcademy.Controllers.API
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CoursesController : ApiController
     {
-        private ApplicationDbContext context = new ApplicationDbContext();
+   
+        private ApplicationDbContext context;
 
-        // GET: api/Courses
-        public IQueryable<Course> GetCourses()
+        /// <summary>
+        /// 
+        /// </summary>
+        public CoursesController()
         {
-            return context.Courses;
+            context = new ApplicationDbContext();
         }
 
+
+        /// <summary>
+        /// GET: api/Courses
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IHttpActionResult GetCourses()
+        {
+            var courses = context.Courses.ToList();
+            return Ok(courses);
+        }
+
+
         // GET: api/Courses/5
+        [HttpGet]
         [ResponseType(typeof(Course))]
         public IHttpActionResult GetCourse(int id)
         {
@@ -36,6 +63,7 @@ namespace DevReadyAcademy.Controllers.API
         }
 
         // PUT: api/Courses/5
+        [HttpPut]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCourse(int id, Course course)
         {
@@ -71,6 +99,7 @@ namespace DevReadyAcademy.Controllers.API
         }
 
         // POST: api/Courses
+        [HttpPost]
         [ResponseType(typeof(Course))]
         public IHttpActionResult PostCourse(Course course)
         {
@@ -86,6 +115,7 @@ namespace DevReadyAcademy.Controllers.API
         }
 
         // DELETE: api/Courses/5
+        [HttpDelete]
         [ResponseType(typeof(Course))]
         public IHttpActionResult DeleteCourse(int id)
         {
@@ -110,6 +140,7 @@ namespace DevReadyAcademy.Controllers.API
             base.Dispose(disposing);
         }
 
+        [NonAction]
         private bool CourseExists(int id)
         {
             return context.Courses.Count(e => e.Id == id) > 0;

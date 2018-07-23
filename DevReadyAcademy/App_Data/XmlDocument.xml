@@ -481,5 +481,21 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:DevReadyAcademy.Controllers.API.CoursesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DevReadyAcademy.Controllers.API.CoursesController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DevReadyAcademy.Controllers.API.CoursesController.GetCourses">
+            <summary>
+            GET: api/Courses
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>
