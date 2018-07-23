@@ -23,7 +23,11 @@ namespace DevReadyAcademy.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            // Disabling proxy creation https://msdn.microsoft.com/en-us/library/jj592886(v=vs.113).aspx
+            this.Configuration.ProxyCreationEnabled = false;
         }
+
+       
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }

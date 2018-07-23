@@ -247,9 +247,17 @@
     <Compile Include="Migrations\201807110546168_Initial.Designer.cs">
       <DependentUpon>201807110546168_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807220950555_Courses_AddNewProperties.cs" />
-    <Compile Include="Migrations\201807220950555_Courses_AddNewProperties.Designer.cs">
-      <DependentUpon>201807220950555_Courses_AddNewProperties.cs</DependentUpon>
+    <Compile Include="Migrations\201807220950555_Course_AddNewProperties.cs" />
+    <Compile Include="Migrations\201807220950555_Course_AddNewProperties.Designer.cs">
+      <DependentUpon>201807220950555_Course_AddNewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230653114_Course_AddNewPropertiesAndValidations.cs" />
+    <Compile Include="Migrations\201807230653114_Course_AddNewPropertiesAndValidations.Designer.cs">
+      <DependentUpon>201807230653114_Course_AddNewPropertiesAndValidations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.cs" />
+    <Compile Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.Designer.cs">
+      <DependentUpon>201807230707364_Course_ReleaseDate_ChangeDataType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -258,6 +266,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Validations\NegativeHours.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -381,8 +390,14 @@
     <EmbeddedResource Include="Migrations\201807110546168_Initial.resx">
       <DependentUpon>201807110546168_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807220950555_Courses_AddNewProperties.resx">
-      <DependentUpon>201807220950555_Courses_AddNewProperties.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807220950555_Course_AddNewProperties.resx">
+      <DependentUpon>201807220950555_Course_AddNewProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230653114_Course_AddNewPropertiesAndValidations.resx">
+      <DependentUpon>201807230653114_Course_AddNewPropertiesAndValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.resx">
+      <DependentUpon>201807230707364_Course_ReleaseDate_ChangeDataType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

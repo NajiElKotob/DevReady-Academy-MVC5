@@ -11,7 +11,7 @@ namespace DevReadyAcademy.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(DevReadyAcademy.Models.ApplicationDbContext context)

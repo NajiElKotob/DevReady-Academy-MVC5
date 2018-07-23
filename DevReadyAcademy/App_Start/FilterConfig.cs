@@ -7,8 +7,12 @@ namespace DevReadyAcademy
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            //Error Handling
             //filters.Add(new HandleErrorAttribute());
             filters.Add(new HandleErrorAttribute() { View = "~/Views/Errors/Index.cshtml" });
+
+            //Security
+            //filters.Add(new AuthorizeAttribute()); //everything is secure
         }
     }
 }

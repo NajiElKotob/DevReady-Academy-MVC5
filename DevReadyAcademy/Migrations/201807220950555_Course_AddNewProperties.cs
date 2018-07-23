@@ -3,7 +3,7 @@ namespace DevReadyAcademy.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Courses_AddNewProperties : DbMigration
+    public partial class Course_AddNewProperties : DbMigration
     {
         public override void Up()
         {

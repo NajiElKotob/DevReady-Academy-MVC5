@@ -37,7 +37,11 @@ namespace DevReadyAcademy
 
             // Bundling and Minification
             // https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification
-            BundleTable.EnableOptimizations = true;
+            #if DEBUG
+                        BundleTable.EnableOptimizations = false;
+            #else
+                                BundleTable.EnableOptimizations = true;
+            #endif
         }
     }
 }

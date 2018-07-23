@@ -42,9 +42,8 @@ namespace DevReadyAcademy.Controllers.API
         /// <returns></returns>
         [HttpGet]
         public IHttpActionResult GetCourses()
-        {
-            var courses = context.Courses.ToList();
-            return Ok(courses);
+        {        
+            return Ok(context.Courses.ToList());
         }
 
 

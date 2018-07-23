@@ -7,13 +7,13 @@ namespace DevReadyAcademy.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Courses_AddNewProperties : IMigrationMetadata
+    public sealed partial class Course_AddNewPropertiesAndValidations : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Courses_AddNewProperties));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Course_AddNewPropertiesAndValidations));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807220950555_Courses_AddNewProperties"; }
+            get { return "201807230653114_Course_AddNewPropertiesAndValidations"; }
         }
         
         string IMigrationMetadata.Source
