@@ -12,6 +12,8 @@ namespace DevReadyAcademy.Models
 
         public DateTime EnrollmentDate { get; set; }
 
+        public int Grade { get; set; }
+
         public virtual Course Course { get; set; }
 
         public virtual Student Student { get; set; }

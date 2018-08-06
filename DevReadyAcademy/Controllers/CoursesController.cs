@@ -46,7 +46,7 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title")] Course course)
+        public ActionResult Create(Course course)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,8 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title")] Course course)
+        
+        public ActionResult Edit(Course course)
         {
             if (ModelState.IsValid)
             {

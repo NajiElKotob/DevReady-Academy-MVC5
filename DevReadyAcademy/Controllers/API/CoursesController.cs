@@ -7,14 +7,17 @@ using System.Web.Http;
 using System.Web.Http.Description;
 
 /*
-Responses Types:
- Ok
- NotFound
- Exception
- Unauthorized
- BadRequest
- Conflict
- Redirect
+IHttpActionResult Responses Types:
+https://www.infoworld.com/article/3192176/application-development/my-two-cents-on-using-the-ihttpactionresult-interface-in-webapi.html
+
+Ok
+NotFound
+Exception
+Unauthorized
+BadRequest
+Conflict
+Redirect
+InvalidModelState
 */
 
 namespace DevReadyAcademy.Controllers.API

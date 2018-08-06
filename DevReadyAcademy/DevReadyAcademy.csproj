@@ -236,6 +236,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\CoursesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -258,6 +259,18 @@
     <Compile Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.cs" />
     <Compile Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.Designer.cs">
       <DependentUpon>201807230707364_Course_ReleaseDate_ChangeDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807231501506_Course_Enrollment_AddNewProperties.cs" />
+    <Compile Include="Migrations\201807231501506_Course_Enrollment_AddNewProperties.Designer.cs">
+      <DependentUpon>201807231501506_Course_Enrollment_AddNewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807252008430_Course_AddNewPropertiesAndValidations1.cs" />
+    <Compile Include="Migrations\201807252008430_Course_AddNewPropertiesAndValidations1.Designer.cs">
+      <DependentUpon>201807252008430_Course_AddNewPropertiesAndValidations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808061916473_Course_Student_AddNewPropertiesAndValidations.cs" />
+    <Compile Include="Migrations\201808061916473_Course_Student_AddNewPropertiesAndValidations.Designer.cs">
+      <DependentUpon>201808061916473_Course_Student_AddNewPropertiesAndValidations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -369,9 +382,15 @@
     <Content Include="Views\Courses\Details.cshtml" />
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Enrollments\Create.cshtml" />
+    <Content Include="Views\Enrollments\Delete.cshtml" />
+    <Content Include="Views\Enrollments\Details.cshtml" />
+    <Content Include="Views\Enrollments\Edit.cshtml" />
+    <Content Include="Views\Enrollments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -398,6 +417,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807230707364_Course_ReleaseDate_ChangeDataType.resx">
       <DependentUpon>201807230707364_Course_ReleaseDate_ChangeDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807231501506_Course_Enrollment_AddNewProperties.resx">
+      <DependentUpon>201807231501506_Course_Enrollment_AddNewProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807252008430_Course_AddNewPropertiesAndValidations1.resx">
+      <DependentUpon>201807252008430_Course_AddNewPropertiesAndValidations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808061916473_Course_Student_AddNewPropertiesAndValidations.resx">
+      <DependentUpon>201808061916473_Course_Student_AddNewPropertiesAndValidations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

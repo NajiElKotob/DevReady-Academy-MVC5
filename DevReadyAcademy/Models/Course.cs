@@ -10,26 +10,44 @@ namespace DevReadyAcademy.Models
     {
         public int Id { get; set; }
 
+        [Display(Name ="Number")]
         public int CourseNumber { get; set; } // e.g. 20778
 
+
+        [Display(Name = "Version")]
         [StringLength(1)]
-        public string CourseVersion { get; set; } // e.g. A, B, C, etc.
+        public string CourseVersion { get; set; } = "A"; // e.g. A, B, C, etc.
 
         [StringLength(100)]
         public string Title { get; set; }
 
-        //[NegativeHoursNotAllowed]
-        [Display(Name = "Total Number of Hours")]
+        [StringLength(400)]
+        [Column(TypeName = "nvarchar")]
+        public string Description { get; set; }
+
+        [NegativeHoursNotAllowed]
+        [Display(Name = "Hours")]
         public int TotalHours { get; set; }
 
-        [Display(Name = "Is Active")]
+        [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime ReleaseDate { get; set; }
+       
+        public DateTime PublishDate { get; set; }
 
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
+       
+        public DateTime? FirstActivationDate { get; set; }
 
         
+        public DateTime? FirstDeactivationDate { get; set; }
+
+        public virtual IEnumerable<Enrollment> Enrollments { get; set; }
+
+
+        [Display(Name = "Code")]
+        [NotMapped]
+        public string CourseCode { get {
+                return $"{CourseNumber}-{CourseVersion}";
+            } }
     }
 }

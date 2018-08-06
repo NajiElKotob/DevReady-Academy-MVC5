@@ -26,13 +26,13 @@ namespace DevReadyAcademy.Migrations
             // https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
 
             context.Courses.AddOrUpdate(
-              p => p.Id,
-              new Course { Title = "Analyzing Data with Power BI" },
-              new Course { Title = "Querying Microsoft SQL Server" },
-              new Course { Title = "Administering Microsoft SQL Server Databases" },
-              new Course { Title = "Implementing a Data Warehouse with Microsoft SQL Server" },
-              new Course { Title = "Programming in C#" },
-              new Course { Title= "Developing ASP.NET MVC 5 Web Applications" }
+              p => p.Title,
+              new Course { Title = "Analyzing Data with Power BI", PublishDate = DateTime.Now },
+              new Course { Title = "Querying Microsoft SQL Server", PublishDate = DateTime.Now },
+              new Course { Title = "Administering Microsoft SQL Server Databases", PublishDate = DateTime.Now },
+              new Course { Title = "Implementing a Data Warehouse with Microsoft SQL Server", PublishDate = DateTime.Now },
+              new Course { Title = "Programming in C#", PublishDate = DateTime.Now },
+              new Course { Title= "Developing ASP.NET MVC 5 Web Applications", PublishDate = DateTime.Now }
 
             );
 
