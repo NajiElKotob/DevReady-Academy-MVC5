@@ -9,6 +9,13 @@ namespace DevReadyAcademy.Models
 {
     public class Student
     {
+
+        public Student()
+        {
+            Enrollments = new HashSet<Enrollment>();
+        }
+
+
         public int Id { get; set; }
 
         [Display(Name = "First Name")]

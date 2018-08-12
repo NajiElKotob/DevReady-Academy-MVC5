@@ -23,8 +23,6 @@ namespace DevReadyAcademy
                       "~/Scripts/bootstrap.js"));
 
 
-
-
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //    "~/Content/bootstrap.css", 
             //    "~/Content/site.css"));
@@ -37,11 +35,16 @@ namespace DevReadyAcademy
 
             // Bundling and Minification
             // https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification
-            #if DEBUG
-                        BundleTable.EnableOptimizations = false;
-            #else
-                                BundleTable.EnableOptimizations = true;
-            #endif
+
+
+            BundleTable.EnableOptimizations = true;
+
+            //#if DEBUG
+            //          BundleTable.EnableOptimizations = false;
+            //#else
+            //          BundleTable.EnableOptimizations = true;
+            //#endif
+
         }
     }
 }

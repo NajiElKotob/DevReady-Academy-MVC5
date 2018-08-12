@@ -1,0 +1,122 @@
+﻿@model DevReadyAcademy.Models.ViewModels.CourseFormViewModel
+
+@{
+    ViewBag.Title = ViewBag.ActionTitle;
+}
+
+<h2>@ViewBag.ActionTitle</h2>
+
+
+@using (Html.BeginForm("Save", "Courses"))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Course</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(m => m.Course.Id)
+
+    <!-- Number -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.CourseNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Course.CourseNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.CourseNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- Version -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.CourseVersion, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Course.CourseVersion, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.CourseVersion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Course.Title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.Title, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Course.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- DropDownList -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.CategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.Course.CategoryId, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Course.CategoryId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- Total Hours -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.TotalHours, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Course.TotalHours, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.TotalHours, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- IsActive -->
+
+   
+
+
+    <div class="form-group">
+       <span class = "control-label col-md-2"> </span>
+        <div class="col-md-10">
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(m => m.Course.IsActive) Is Active?
+                </label>
+            </div>
+            @Html.ValidationMessageFor(m => m.Course.IsActive, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.PublishDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(m => m.Course.PublishDate, "{0:dd MMM yyyy}", new { @class = "form-control", type = "date" })
+            @*@Html.TextBoxFor(m => m.Course.PublishDate, "{0:d/M/yyyy}", new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.ValidationMessageFor(m => m.Course.PublishDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Course.FirstActivationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(m => m.Course.FirstActivationDate, "{0:dd MMM yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Course.FirstActivationDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

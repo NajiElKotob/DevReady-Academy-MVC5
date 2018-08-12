@@ -8,6 +8,11 @@ namespace DevReadyAcademy.Models
 {
     public class Course
     {
+        public Course()
+        {
+            Enrollments = new HashSet<Enrollment>();
+        }
+
         public int Id { get; set; }
 
         [Display(Name ="Number")]
@@ -32,17 +37,25 @@ namespace DevReadyAcademy.Models
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
-       
+        [Display(Name = "Publish Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd MMM yyyy}", ApplyFormatInEditMode = true)]
         public DateTime PublishDate { get; set; }
 
-       
+        [Display(Name = "Activation Date")]
         public DateTime? FirstActivationDate { get; set; }
 
-        
-        public DateTime? FirstDeactivationDate { get; set; }
+        //[Display(Name = "Discontinued")]
+        //public bool IsDiscontinued { get; set; }
 
         public virtual IEnumerable<Enrollment> Enrollments { get; set; }
 
+
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
+
+
+        //Unmapped Methods
 
         [Display(Name = "Code")]
         [NotMapped]

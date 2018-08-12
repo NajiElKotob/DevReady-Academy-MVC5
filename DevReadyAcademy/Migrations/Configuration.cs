@@ -25,16 +25,27 @@ namespace DevReadyAcademy.Migrations
             // Use Code First Migrations to Seed the Database
             // https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
 
+            context.Categories.AddOrUpdate(
+                  c => c.Name,
+                  new Category { Name = "Unspecified" },
+                  new Category { Name = "Programming" },
+                  new Category { Name = "Data Science" },
+                  new Category { Name = "Database" }
+                );
+
             context.Courses.AddOrUpdate(
               p => p.Title,
-              new Course { Title = "Analyzing Data with Power BI", PublishDate = DateTime.Now },
-              new Course { Title = "Querying Microsoft SQL Server", PublishDate = DateTime.Now },
-              new Course { Title = "Administering Microsoft SQL Server Databases", PublishDate = DateTime.Now },
-              new Course { Title = "Implementing a Data Warehouse with Microsoft SQL Server", PublishDate = DateTime.Now },
-              new Course { Title = "Programming in C#", PublishDate = DateTime.Now },
-              new Course { Title= "Developing ASP.NET MVC 5 Web Applications", PublishDate = DateTime.Now }
+              new Course { Title = "Analyzing Data with Power BI", CategoryId = 1, PublishDate = DateTime.Now },
+              new Course { Title = "Querying Microsoft SQL Server", CategoryId = 1, PublishDate = DateTime.Now },
+              new Course { Title = "Administering Microsoft SQL Server Databases", CategoryId = 1, PublishDate = DateTime.Now },
+              new Course { Title = "Implementing a Data Warehouse with Microsoft SQL Server", CategoryId = 1, PublishDate = DateTime.Now },
+              new Course { Title = "Programming in C#", CategoryId = 1, PublishDate = DateTime.Now },
+              new Course { Title = "Developing ASP.NET MVC 5 Web Applications", CategoryId = 1, PublishDate = DateTime.Now }
 
             );
+
+
+
 
         }
     }

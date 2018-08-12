@@ -36,6 +36,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.DependencyCollector, Version=2.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.6.4\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
     </Reference>
@@ -107,6 +111,9 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -272,14 +279,44 @@
     <Compile Include="Migrations\201808061916473_Course_Student_AddNewPropertiesAndValidations.Designer.cs">
       <DependentUpon>201808061916473_Course_Student_AddNewPropertiesAndValidations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808062106500_Category_AddNewEntity.cs" />
+    <Compile Include="Migrations\201808062106500_Category_AddNewEntity.Designer.cs">
+      <DependentUpon>201808062106500_Category_AddNewEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062213079_Category_Course_AddNavigationProperty.cs" />
+    <Compile Include="Migrations\201808062213079_Category_Course_AddNavigationProperty.Designer.cs">
+      <DependentUpon>201808062213079_Category_Course_AddNavigationProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062228533_Category_Course_AddForeignKey.cs" />
+    <Compile Include="Migrations\201808062228533_Category_Course_AddForeignKey.Designer.cs">
+      <DependentUpon>201808062228533_Category_Course_AddForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808121250237_Course_Enhancements.cs" />
+    <Compile Include="Migrations\201808121250237_Course_Enhancements.Designer.cs">
+      <DependentUpon>201808121250237_Course_Enhancements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\DTOs\CourseDTO.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Repositories\StudentRepository.cs" />
+    <Compile Include="Models\Repositories\CategoryRepository.cs" />
+    <Compile Include="Models\Repositories\CourseRepository.cs" />
+    <Compile Include="Models\Repositories\Interfaces\ICategoryRepository.cs" />
+    <Compile Include="Models\Repositories\Interfaces\IStudentRepository.cs" />
+    <Compile Include="Models\Repositories\Interfaces\ICourseRepository.cs" />
+    <Compile Include="Models\Repositories\Interfaces\IRepository.cs" />
+    <Compile Include="Models\Repositories\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Models\Repositories\UnitOfWork.cs" />
+    <Compile Include="Models\Repositories\Repository.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Validations\NegativeHours.cs" />
+    <Compile Include="Models\ViewModels\CourseFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -372,25 +409,25 @@
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
     <Content Include="Views\Errors\Index.cshtml" />
     <Content Include="Views\Errors\FileNotFound.cshtml" />
-    <Content Include="Views\Students\Create.cshtml" />
-    <Content Include="Views\Students\Delete.cshtml" />
-    <Content Include="Views\Students\Details.cshtml" />
-    <Content Include="Views\Students\Edit.cshtml" />
-    <Content Include="Views\Students\Index.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
     <Content Include="Views\Courses\Delete.cshtml" />
     <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\CourseForm.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Enrollments\Create.cshtml" />
     <Content Include="Views\Enrollments\Delete.cshtml" />
     <Content Include="Views\Enrollments\Details.cshtml" />
     <Content Include="Views\Enrollments\Edit.cshtml" />
     <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Repositories\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Models\Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -426,6 +463,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808061916473_Course_Student_AddNewPropertiesAndValidations.resx">
       <DependentUpon>201808061916473_Course_Student_AddNewPropertiesAndValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062106500_Category_AddNewEntity.resx">
+      <DependentUpon>201808062106500_Category_AddNewEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062213079_Category_Course_AddNavigationProperty.resx">
+      <DependentUpon>201808062213079_Category_Course_AddNavigationProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062228533_Category_Course_AddForeignKey.resx">
+      <DependentUpon>201808062228533_Category_Course_AddForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808121250237_Course_Enhancements.resx">
+      <DependentUpon>201808121250237_Course_Enhancements.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

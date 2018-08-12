@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -46,7 +46,7 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstMidName,LastName,RegistrationDate")] Student student)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,RegistrationDate")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstMidName,LastName,RegistrationDate")] Student student)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,RegistrationDate")] Student student)
         {
             if (ModelState.IsValid)
             {

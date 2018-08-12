@@ -13,6 +13,10 @@ DevReady Academy - ASP.NET MVC 5
 * [Binding views with Anonymous type collection in ASP.NET MVC](http://www.dotnetfunda.com/articles/show/2655/binding-views-with-anonymous-type-collection-in-aspnet-mvc)
 * [Create Data Transfer Objects (DTOs)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-5)
 * [Using AutoMapper in MVC](https://www.c-sharpcorner.com/UploadFile/tirthacs/using-automapper-in-mvc/)
+* [Unit of Work](https://github.com/Arch/UnitOfWork)
+* [Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+
+
 
 
 

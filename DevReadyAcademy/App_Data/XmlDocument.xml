@@ -497,5 +497,17 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:DevReadyAcademy.Models.Repositories.Interfaces.IRepository`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:DevReadyAcademy.Models.Repositories.Interfaces.IRepository`1.GetAll">
+            <summary>
+            GetAll
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

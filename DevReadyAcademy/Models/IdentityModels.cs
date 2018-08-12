@@ -30,8 +30,11 @@ namespace DevReadyAcademy.Models
        
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
+
+
 
         public static ApplicationDbContext Create()
         {

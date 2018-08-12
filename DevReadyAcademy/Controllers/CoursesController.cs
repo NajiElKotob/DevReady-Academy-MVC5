@@ -1,23 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using AutoMapper;
+using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.DTOs;
+using DevReadyAcademy.Models.Repositories;
+using DevReadyAcademy.Models.ViewModels;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using DevReadyAcademy.Models;
 
 namespace DevReadyAcademy.Controllers
 {
     public class CoursesController : Controller
     {
-        private ApplicationDbContext context = new ApplicationDbContext();
+        //Constants
+        private const string CourseFormConst = "CourseForm";
+        private const string CoursesConst = "Courses";
+        private const string IndexConst = "Index";
+
+
+        //private ApplicationDbContext context = new ApplicationDbContext();
+
+        private UnitOfWork unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
         // GET: Courses
         public ActionResult Index()
         {
-            return View(context.Courses.ToList());
+            //TODO: Add Data Caching
+
+            return View(unitOfWork.Courses.GetAll());
         }
 
         // GET: Courses/Details/5
@@ -27,68 +38,112 @@ namespace DevReadyAcademy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = context.Courses.Find(id);
+
+            Course course = unitOfWork.Courses.Get(id.Value);
             if (course == null)
             {
                 return HttpNotFound();
             }
+
             return View(course);
         }
+
 
         // GET: Courses/Create
         public ActionResult Create()
         {
-            return View();
-        }
+            ViewBag.ActionTitle = "New Course";
 
-        // POST: Courses/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Course course)
-        {
-            if (ModelState.IsValid)
+            return View(CourseFormConst, new CourseFormViewModel()
             {
-                context.Courses.Add(course);
-                context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(course);
+                Course = new Course(),
+                Categories = unitOfWork.Categories.GetAll()
+            });
         }
+
+
 
         // GET: Courses/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Course course = context.Courses.Find(id);
-            if (course == null)
+                return HttpNotFound();
+
+            var courseInDb = unitOfWork.Courses.Get(id.Value);
+            if (courseInDb == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+
+            ViewBag.ActionTitle = $"Edit Course ({courseInDb.CourseCode})";
+            return View(CourseFormConst, new CourseFormViewModel()
+            {
+                Course = courseInDb,
+                Categories = unitOfWork.Categories.GetAll()
+            });
+
         }
 
-        // POST: Courses/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Courses/Save/CourseFormViewModel
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
-        public ActionResult Edit(Course course)
+        public ActionResult Save([Bind(Exclude = "PublishDate,FirstActivationDate")]
+                                    Course course)
         {
-            if (ModelState.IsValid)
+
+            if (!ModelState.IsValid)
             {
-                context.Entry(course).State = EntityState.Modified;
-                context.SaveChanges();
-                return RedirectToAction("Index");
+                var viewModel = new CourseFormViewModel
+                {
+                    Course = course,
+                    Categories = unitOfWork.Categories.GetAll()
+                };
+
+                return View(CourseFormConst, viewModel);
             }
-            return View(course);
+
+            if (course.Id == 0) //New Course
+            {
+                course.PublishDate = DateTime.Now;
+
+                if (course.IsActive == true)
+                {
+                    course.FirstActivationDate = DateTime.Now;
+                }
+
+                unitOfWork.Courses.Add(course);
+            }
+            else //Modified Course
+            {
+                var courseInDb = unitOfWork.Courses.Get(course.Id);
+                if (courseInDb == null)
+                {
+                    return HttpNotFound();
+                }
+
+                courseInDb.CourseNumber = course.CourseNumber;
+                courseInDb.CourseVersion = course.CourseVersion;
+                courseInDb.Description = course.Description;
+                courseInDb.TotalHours = course.TotalHours;
+                courseInDb.IsActive = course.IsActive;
+                courseInDb.CategoryId = course.CategoryId;
+
+                //TODO: Review the security AND business logic
+                if (course.IsActive == true && courseInDb.IsActive == false)
+                {
+                    courseInDb.FirstActivationDate = DateTime.Now;
+                }
+         
+
+               // unitOfWork.Courses.Update(course); //https://msdn.microsoft.com/en-us/library/jj592676%28v=vs.113%29.aspx
+            }
+
+            unitOfWork.Save();
+
+            return RedirectToAction(IndexConst, CoursesConst);
         }
+
+
 
         // GET: Courses/Delete/5
         public ActionResult Delete(int? id)
@@ -97,7 +152,7 @@ namespace DevReadyAcademy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = context.Courses.Find(id);
+            Course course = unitOfWork.Courses.Get(id.Value);
             if (course == null)
             {
                 return HttpNotFound();
@@ -105,22 +160,23 @@ namespace DevReadyAcademy.Controllers
             return View(course);
         }
 
+
         // POST: Courses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Course course = context.Courses.Find(id);
-            context.Courses.Remove(course);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            Course course = unitOfWork.Courses.Get(id);
+            unitOfWork.Courses.Remove(course);
+            unitOfWork.Save();
+            return RedirectToAction(IndexConst);
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                context.Dispose();
+                unitOfWork.Dispose();
             }
             base.Dispose(disposing);
         }
