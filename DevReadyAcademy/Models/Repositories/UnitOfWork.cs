@@ -28,19 +28,19 @@ namespace DevReadyAcademy.Models.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public readonly ApplicationDbContext _context; //Make it private in Production
+        private readonly ApplicationDbContext _context;
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
+
+            _context.Database.Log = Console.WriteLine;
 
             Categories = new CategoryRepository(_context);
             Courses = new CourseRepository(_context);
             Students = new StudentRepository(_context);
 
             //...
-
-            _context.Database.Log = Console.WriteLine;
         }
 
         public ICategoryRepository Categories { get; private set; }
@@ -49,10 +49,16 @@ namespace DevReadyAcademy.Models.Repositories
 
 
 
-        //...
-
+     
         public int Save()
         {
+
+            //if (_context.ChangeTracker.HasChanges() == true)
+            //{
+            //    Courses.RefreshCache();
+            //    Categories.RefreshCache();
+            //    Students.RefreshCache();
+            //}
             return _context.SaveChanges();
         }
 

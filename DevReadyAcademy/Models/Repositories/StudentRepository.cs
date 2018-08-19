@@ -21,8 +21,8 @@ namespace DevReadyAcademy.Models.Repositories
 
         public IEnumerable<Course> GetActiveStudents()
         {
-            //return AppContext.Students.Where(s => s == "").ToList();
-            return null;
+            //return AppContext.Students.Where(s => s.LastName == "").ToList();
+           return null;
         }
     }
 }

@@ -26,9 +26,10 @@ namespace DevReadyAcademy.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            //TODO: Add Data Caching
+            //return View(unitOfWork.Courses.GetAll(true)); //Getting data from Cache
 
-            return View(unitOfWork.Courses.GetAll());
+            return View(unitOfWork.Courses.GetAll()); //Getting data directly from Database
+
         }
 
         // GET: Courses/Details/5
@@ -110,7 +111,6 @@ namespace DevReadyAcademy.Controllers
                 {
                     course.FirstActivationDate = DateTime.Now;
                 }
-
                 unitOfWork.Courses.Add(course);
             }
             else //Modified Course
@@ -133,7 +133,8 @@ namespace DevReadyAcademy.Controllers
                 {
                     courseInDb.FirstActivationDate = DateTime.Now;
                 }
-         
+
+
 
                // unitOfWork.Courses.Update(course); //https://msdn.microsoft.com/en-us/library/jj592676%28v=vs.113%29.aspx
             }

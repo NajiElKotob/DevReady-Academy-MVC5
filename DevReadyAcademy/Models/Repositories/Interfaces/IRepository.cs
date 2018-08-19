@@ -14,12 +14,14 @@ namespace DevReadyAcademy.Models.Repositories.Interfaces
     public interface IRepository<TEntity> where TEntity : class
     {
 
+        //void RefreshCache();
+
         /// <summary>
         /// GetAll
         /// </summary>
         /// <returns></returns>
         IEnumerable<TEntity> GetAll();
-
+        //IEnumerable<TEntity> GetAll(bool fromCache);
         TEntity Get(int id);
 
         //Find
@@ -39,7 +41,7 @@ namespace DevReadyAcademy.Models.Repositories.Interfaces
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
 
-       
+        bool IsExist(int id);
 
     }
 }

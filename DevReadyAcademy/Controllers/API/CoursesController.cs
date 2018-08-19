@@ -1,4 +1,5 @@
 ﻿using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Repositories;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -27,15 +28,15 @@ namespace DevReadyAcademy.Controllers.API
     /// </summary>
     public class CoursesController : ApiController
     {
-   
-        private ApplicationDbContext context;
+
+        private UnitOfWork unitOfWork; 
 
         /// <summary>
         /// 
         /// </summary>
         public CoursesController()
         {
-            context = new ApplicationDbContext();
+            unitOfWork = new UnitOfWork(new ApplicationDbContext());
         }
 
 
@@ -46,7 +47,7 @@ namespace DevReadyAcademy.Controllers.API
         [HttpGet]
         public IHttpActionResult GetCourses()
         {        
-            return Ok(context.Courses.ToList());
+            return Ok(unitOfWork.Courses.GetAll());
         }
 
 
@@ -55,7 +56,7 @@ namespace DevReadyAcademy.Controllers.API
         [ResponseType(typeof(Course))]
         public IHttpActionResult GetCourse(int id)
         {
-            Course course = context.Courses.Find(id);
+            Course course = unitOfWork.Courses.Get(id);
             if (course == null)
             {
                 return NotFound();
@@ -79,11 +80,11 @@ namespace DevReadyAcademy.Controllers.API
                 return BadRequest();
             }
 
-            context.Entry(course).State = EntityState.Modified;
+            unitOfWork.Courses.Update(course);
 
             try
             {
-                context.SaveChanges();
+                unitOfWork.Save();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -110,8 +111,8 @@ namespace DevReadyAcademy.Controllers.API
                 return BadRequest(ModelState);
             }
 
-            context.Courses.Add(course);
-            context.SaveChanges();
+            unitOfWork.Courses.Add(course);
+            unitOfWork.Save();
 
             return CreatedAtRoute("DefaultApi", new { id = course.Id }, course);
         }
@@ -121,14 +122,14 @@ namespace DevReadyAcademy.Controllers.API
         [ResponseType(typeof(Course))]
         public IHttpActionResult DeleteCourse(int id)
         {
-            Course course = context.Courses.Find(id);
+            Course course = unitOfWork.Courses.Get(id);
             if (course == null)
             {
                 return NotFound();
             }
 
-            context.Courses.Remove(course);
-            context.SaveChanges();
+            unitOfWork.Courses.Remove(course);
+            unitOfWork.Save();
 
             return Ok(course);
         }
@@ -137,7 +138,7 @@ namespace DevReadyAcademy.Controllers.API
         {
             if (disposing)
             {
-                context.Dispose();
+                unitOfWork.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -145,7 +146,7 @@ namespace DevReadyAcademy.Controllers.API
         [NonAction]
         private bool CourseExists(int id)
         {
-            return context.Courses.Count(e => e.Id == id) > 0;
+            return unitOfWork.Courses.IsExist(id);
         }
     }
 }
