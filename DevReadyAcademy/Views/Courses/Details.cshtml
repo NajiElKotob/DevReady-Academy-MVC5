@@ -4,15 +4,16 @@
     ViewBag.Title = "Details";
 
     var print = false;
+    var layoutPrint = "~/Views/Shared/_LayoutPrint.cshtml";
 
     if (Request.QueryString["print"] == "true")
     {
         print = true;
+
     }
 
-
-    Layout = print ? null : Layout;
-
+    // Layout = print ? null : Layout; 
+    Layout = print ? layoutPrint : Layout;
 }
 
 <h2>Details</h2>
