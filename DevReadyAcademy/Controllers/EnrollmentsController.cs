@@ -39,8 +39,10 @@ namespace DevReadyAcademy.Controllers
         // GET: Enrollments/Create
         public ActionResult Create()
         {
-            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseVersion");
-            ViewBag.StudentId = new SelectList(db.Students, "Id", "FirstMidName");
+            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseCode");
+            ViewBag.StudentId = new SelectList(db.Students, "Id", "FullName");
+            ViewBag.Title = "Create";
+            ViewBag.EditMode = false;
             return View();
         }
 
@@ -49,17 +51,24 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CourseId,StudentId,EnrollmentDate,Grade")] Enrollment enrollment)
+        public ActionResult Create([Bind(Include = "CourseId,StudentId")] Enrollment enrollment)
         {
+
             if (ModelState.IsValid)
             {
+                enrollment.EnrollmentDate = DateTime.Now;
+
                 db.Enrollments.Add(enrollment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseVersion", enrollment.CourseId);
-            ViewBag.StudentId = new SelectList(db.Students, "Id", "FirstMidName", enrollment.StudentId);
+            var errors = ModelState.Select(m => m.Value.Errors)
+                           .Where(e => e.Count > 0)
+                           .ToList();
+
+            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseCode", enrollment.CourseId);
+            ViewBag.StudentId = new SelectList(db.Students, "Id", "FullName", enrollment.StudentId);
             return View(enrollment);
         }
 
@@ -75,8 +84,10 @@ namespace DevReadyAcademy.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseVersion", enrollment.CourseId);
-            ViewBag.StudentId = new SelectList(db.Students, "Id", "FirstMidName", enrollment.StudentId);
+            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseCode", enrollment.CourseId);
+            ViewBag.StudentId = new SelectList(db.Students, "Id", "FullName", enrollment.StudentId);
+            ViewBag.EditMode = true;
+            ViewBag.Title = "Edit";
             return View(enrollment);
         }
 
@@ -93,8 +104,8 @@ namespace DevReadyAcademy.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseVersion", enrollment.CourseId);
-            ViewBag.StudentId = new SelectList(db.Students, "Id", "FirstMidName", enrollment.StudentId);
+            ViewBag.CourseId = new SelectList(db.Courses, "Id", "CourseCode", enrollment.CourseId);
+            ViewBag.StudentId = new SelectList(db.Students, "Id", "FullName", enrollment.StudentId);
             return View(enrollment);
         }
 
