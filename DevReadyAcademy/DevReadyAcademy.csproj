@@ -416,10 +416,8 @@
     <Content Include="Views\Courses\Details.cshtml" />
     <Content Include="Views\Courses\CourseForm.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
-    <Content Include="Views\Enrollments\Create.cshtml" />
     <Content Include="Views\Enrollments\Delete.cshtml" />
     <Content Include="Views\Enrollments\Details.cshtml" />
-    <Content Include="Views\Enrollments\Edit.cshtml" />
     <Content Include="Views\Enrollments\Index.cshtml" />
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Students\Delete.cshtml" />
@@ -427,6 +425,7 @@
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutPrint.cshtml" />
+    <Content Include="Views\Enrollments\EnrollmentForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -30,7 +30,7 @@ namespace DevReadyAcademy.Models
         [Column(TypeName = "nvarchar")]
         public string Description { get; set; }
 
-        [NegativeHoursNotAllowed]
+        [NegativeValuesNotAllowed]
         [Display(Name = "Hours")]
         public int TotalHours { get; set; }
 

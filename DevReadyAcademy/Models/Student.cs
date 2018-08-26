@@ -23,6 +23,8 @@ namespace DevReadyAcademy.Models
 
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+
+        [Display(Name = "Registration Date")]
         public DateTime RegistrationDate { get; set; }
 
         public virtual IEnumerable<Enrollment> Enrollments { get; set; }

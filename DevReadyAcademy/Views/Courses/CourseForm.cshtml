@@ -62,55 +62,56 @@
         </div>
     </div>
 
-    <!-- Total Hours -->
-    <div class="form-group">
-        @Html.LabelFor(m => m.Course.TotalHours, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(m => m.Course.TotalHours, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(m => m.Course.TotalHours, "", new { @class = "text-danger" })
-        </div>
-    </div>
 
-    <!-- IsActive -->
-
-   
-
-
-    <div class="form-group">
-       <span class = "control-label col-md-2"> </span>
-        <div class="col-md-10">
-            <div class="checkbox">
-                <label>
-                    @Html.CheckBoxFor(m => m.Course.IsActive) Is Active?
-                </label>
+        <!-- Total Hours -->
+        <div class="form-group">
+            @Html.LabelFor(m => m.Course.TotalHours, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.Course.TotalHours, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Course.TotalHours, "", new { @class = "text-danger" })
             </div>
-            @Html.ValidationMessageFor(m => m.Course.IsActive, "", new { @class = "text-danger" })
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Course.PublishDate, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DisplayFor(m => m.Course.PublishDate, "{0:dd MMM yyyy}", new { @class = "form-control", type = "date" })
-            @*@Html.TextBoxFor(m => m.Course.PublishDate, "{0:d/M/yyyy}", new { htmlAttributes = new { @class = "form-control" } })*@
-            @Html.ValidationMessageFor(m => m.Course.PublishDate, "", new { @class = "text-danger" })
-        </div>
-    </div>
+        <!-- IsActive -->
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Course.FirstActivationDate, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DisplayFor(m => m.Course.FirstActivationDate, "{0:dd MMM yyyy}", new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(m => m.Course.FirstActivationDate, "", new { @class = "text-danger" })
-        </div>
-    </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+
+
+        <div class="form-group">
+            <span class="control-label col-md-2"> </span>
+            <div class="col-md-10">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.Course.IsActive) Is Active?
+                    </label>
+                </div>
+                @Html.ValidationMessageFor(m => m.Course.IsActive, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Course.PublishDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(m => m.Course.PublishDate, "{0:dd MMM yyyy}", new { @class = "form-control", type = "date" })
+                @*@Html.TextBoxFor(m => m.Course.PublishDate, "{0:d/M/yyyy}", new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(m => m.Course.PublishDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Course.FirstActivationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(m => m.Course.FirstActivationDate, "{0:dd MMM yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Course.FirstActivationDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
 
 <div>
