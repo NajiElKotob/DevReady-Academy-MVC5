@@ -1,6 +1,8 @@
 namespace DevReadyAcademy.Migrations
 {
     using DevReadyAcademy.Models;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -25,6 +27,7 @@ namespace DevReadyAcademy.Migrations
             // Use Code First Migrations to Seed the Database
             // https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
 
+            //Categories
             context.Categories.AddOrUpdate(
                   c => c.Name,
                   new Category { Name = "Unspecified" },
@@ -33,6 +36,7 @@ namespace DevReadyAcademy.Migrations
                   new Category { Name = "Database" }
                 );
 
+            //Courses
             context.Courses.AddOrUpdate(
               p => p.Title,
               new Course { Title = "Analyzing Data with Power BI", CategoryId = 1, PublishDate = DateTime.Now },
@@ -45,6 +49,36 @@ namespace DevReadyAcademy.Migrations
             );
 
 
+            //Users and Roles
+            var adminRoleName = "Admin";
+            var adminUserName = "naji@dotnetheroes.local";
+            var defaultPassword = "Pa55w.rd";
+
+            if (!context.Roles.Any(r => r.Name == adminRoleName))
+            {
+                var roleStore = new RoleStore<IdentityRole>(context);
+                var roleManager = new RoleManager<IdentityRole>(roleStore);
+                var role = new IdentityRole { Name = adminRoleName };
+
+                roleManager.Create(role);
+            }
+
+            if (!context.Users.Any(u => u.UserName == adminUserName))
+            {
+                //var hashedPassword = new PasswordHasher().HashPassword("Pa55w.rd");
+
+                var userStore = new UserStore<ApplicationUser>(context);
+                var userManager = new UserManager<ApplicationUser>(userStore);
+                var user = new ApplicationUser {
+                    UserName = adminUserName,
+                    Email = adminUserName
+                };
+
+                userManager.Create(user, defaultPassword);
+                userManager.AddToRole(user.Id, adminRoleName);
+            }
+
+ 
 
 
         }

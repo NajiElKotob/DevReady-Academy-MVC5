@@ -300,6 +300,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Constants\Roles.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\DTOs\CourseDTO.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -430,7 +431,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Models\Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

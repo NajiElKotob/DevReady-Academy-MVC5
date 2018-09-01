@@ -6,8 +6,12 @@ using System.Web;
 
 namespace DevReadyAcademy.Models.Validations
 {
+
+
+
     public class NegativeValuesNotAllowed: ValidationAttribute
     {
+
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             //Ref. https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation

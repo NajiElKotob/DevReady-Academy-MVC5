@@ -73,13 +73,13 @@ namespace DevReadyAcademy.Controllers
                 return View(EnrollmentFormConst, enrollment);
             }
 
-            if (enrollment.Id == 0) //New Course
+            if (enrollment.Id == 0) //New Enrollment
             {
                 enrollment.EnrollmentDate = DateTime.Now;
                 enrollment.Grade = 0;
                 context.Enrollments.Add(enrollment);
             }
-            else //Modified Course
+            else //Modified Enrollment
             {
 
                 Enrollment enrollmentInDb = context.Enrollments.Find(enrollment.Id);
