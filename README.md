@@ -17,7 +17,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 * [ASP.NET MVC 5 Security And Creating User Role](https://code.msdn.microsoft.com/ASPNET-MVC-5-Security-And-44cbdb97)
-
+* [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 
 
 
