@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>whoami</title>
+</head>
+<body>
+    <div> 
+        <h2>whoami</h2>
+        Username: @User.Identity.Name <br />
+        Is Authenticated: @User.Identity.IsAuthenticated.ToString() <br />
+        Authentication Type: @User.Identity.AuthenticationType.ToString() <br />
+        Is Admin: @User.IsInRole("Admin") <br />
+
+        @if (!User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Login", "login","account")
+        }
+    </div>
+</body>
+</html>
