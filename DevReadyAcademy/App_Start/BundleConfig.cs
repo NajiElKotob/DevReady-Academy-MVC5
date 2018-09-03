@@ -29,7 +29,7 @@ namespace DevReadyAcademy
 
             //Advanced Technique
             Bundle contentCss = new StyleBundle("~/bundles/css");
-            contentCss.Include("~/Content/bootstrap.css", new CssRewriteUrlTransform());
+            contentCss.Include("~/Content/bootstrap-cerulean.css", new CssRewriteUrlTransform());
             contentCss.Include("~/Content/Site.css", new CssRewriteUrlTransform());
             bundles.Add(contentCss);
 
