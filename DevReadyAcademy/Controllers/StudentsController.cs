@@ -7,17 +7,19 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Repositories;
 
 namespace DevReadyAcademy.Controllers
 {
     public class StudentsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        //private ApplicationDbContext db = new ApplicationDbContext();
+        private UnitOfWork db = new UnitOfWork(new ApplicationDbContext());
 
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View(db.Students.GetAll());
         }
 
         // GET: Students/Details/5
@@ -27,7 +29,7 @@ namespace DevReadyAcademy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Student student = db.Students.Get(id.Value);
             if (student == null)
             {
                 return HttpNotFound();
@@ -51,7 +53,7 @@ namespace DevReadyAcademy.Controllers
             if (ModelState.IsValid)
             {
                 db.Students.Add(student);
-                db.SaveChanges();
+                db.Save();
                 return RedirectToAction("Index");
             }
 
@@ -65,7 +67,7 @@ namespace DevReadyAcademy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Student student = db.Students.Get(id.Value);
             if (student == null)
             {
                 return HttpNotFound();
@@ -82,8 +84,8 @@ namespace DevReadyAcademy.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
-                db.SaveChanges();
+                db.Students.Update(student);
+                db.Save();
                 return RedirectToAction("Index");
             }
             return View(student);
@@ -96,7 +98,7 @@ namespace DevReadyAcademy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Student student = db.Students.Get(id.Value);
             if (student == null)
             {
                 return HttpNotFound();
@@ -109,11 +111,18 @@ namespace DevReadyAcademy.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Students.Find(id);
+            Student student = db.Students.Get(id);
             db.Students.Remove(student);
-            db.SaveChanges();
+            db.Save();
             return RedirectToAction("Index");
         }
+
+        public ActionResult CalculateGPA(int id)
+        {
+            ViewBag.AverageGPA = db.Students.CalculateAvergeGPA(id);
+            return View();
+        }
+
 
         protected override void Dispose(bool disposing)
         {

@@ -509,5 +509,32 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:DevReadyAcademy.Models.SQL.StoredProcedure.StoredProcedures">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DevReadyAcademy.Models.SQL.StoredProcedure.StoredProcedures.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DevReadyAcademy.Models.SQL.StoredProcedure.StoredProcedures.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DevReadyAcademy.Models.SQL.StoredProcedure.StoredProcedures.usp_CalculateAverageGPA_Down__1809030001">
+             <summary>
+               Looks up a localized string similar to DROP PROC IF EXISTS usp_CalculateAverageGPA
+            GO.
+             </summary>
+        </member>
+        <member name="P:DevReadyAcademy.Models.SQL.StoredProcedure.StoredProcedures.usp_CalculateAverageGPA_Up__1809030001">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
     </members>
 </doc>

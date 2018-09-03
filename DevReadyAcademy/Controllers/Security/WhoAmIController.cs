@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace DevReadyAcademy.Controllers.Security
 {
+    [AllowAnonymous]
     public class WhoAmIController : Controller
     {
         // GET: WhoAmI

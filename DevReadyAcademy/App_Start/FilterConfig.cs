@@ -12,7 +12,7 @@ namespace DevReadyAcademy
             filters.Add(new HandleErrorAttribute() { View = "~/Views/Errors/Index.cshtml" });
 
             //Security
-            //filters.Add(new AuthorizeAttribute()); //Enable application-level authorization
+            filters.Add(new AuthorizeAttribute()); //Secure by Default
             //filters.Add(new RequireHttpsAttribute()); //Enforce HTTPS
         }
     }

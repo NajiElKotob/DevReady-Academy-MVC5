@@ -16,8 +16,15 @@ DevReady Academy - ASP.NET MVC 5
 * [Unit of Work](https://github.com/Arch/UnitOfWork)
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+
+
 * [ASP.NET MVC 5 Security And Creating User Role](https://code.msdn.microsoft.com/ASPNET-MVC-5-Security-And-44cbdb97)
+* [ASP.NET Identity Stripped Bare - MVC Part 1](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-1)
+* [ASP.NET Identity Stripped Bare - MVC Part 2](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-2)
+### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
+
+
 
 
 

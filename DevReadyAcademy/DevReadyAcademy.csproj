@@ -299,12 +299,17 @@
     <Compile Include="Migrations\201808121250237_Course_Enhancements.Designer.cs">
       <DependentUpon>201808121250237_Course_Enhancements.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809030617583_SP_CalculateAverageGPA.cs" />
+    <Compile Include="Migrations\201809030617583_SP_CalculateAverageGPA.Designer.cs">
+      <DependentUpon>201809030617583_SP_CalculateAverageGPA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Constants\Roles.cs" />
+    <Compile Include="Models\Constants\RoleName.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\DTOs\CourseDTO.cs" />
+    <Compile Include="Models\DTOs\GpaDTO.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -318,6 +323,11 @@
     <Compile Include="Models\Repositories\Interfaces\IUnitOfWork.cs" />
     <Compile Include="Models\Repositories\UnitOfWork.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
+    <Compile Include="Models\SQL\StoredProcedure\StoredProcedures.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoredProcedures.resx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Validations\NegativeHours.cs" />
@@ -336,6 +346,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Models\SQL\StoredProcedure\usp_CalculateAverageGPA_Up__1809030001.sql" />
+    <None Include="Models\SQL\StoredProcedure\usp_CalculateAverageGPA_Down__1809030001.sql" />
     <Content Include="readme.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -431,6 +443,7 @@
     <Content Include="Views\Shared\_LayoutPrint.cshtml" />
     <Content Include="Views\Enrollments\EnrollmentForm.cshtml" />
     <Content Include="Views\WhoAmI\Index.cshtml" />
+    <Content Include="Views\Students\CalculateGPA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -482,6 +495,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808121250237_Course_Enhancements.resx">
       <DependentUpon>201808121250237_Course_Enhancements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809030617583_SP_CalculateAverageGPA.resx">
+      <DependentUpon>201809030617583_SP_CalculateAverageGPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\SQL\StoredProcedure\StoredProcedures.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StoredProcedures.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

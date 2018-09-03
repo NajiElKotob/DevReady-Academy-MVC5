@@ -52,33 +52,73 @@ namespace DevReadyAcademy.Migrations
             //Users and Roles
             var adminRoleName = "Admin";
             var adminUserName = "naji@dotnetheroes.local";
-            var defaultPassword = "Pa55w.rd";
+            var adminEmailAddress = "naji@dotnetheroes.local";
 
+            var instructorRoleName = "Instructor";
+            var instructorUserName = "instructor@dotnetheroes.local";
+            var instructorEmailAddress = "instructor@dotnetheroes.local";
+
+            var usersRoleName = "Users";
+
+            var defaultPassword = "Pa55w.rd";
+            //var hashedPassword = new PasswordHasher().HashPassword("Pa55w.rd");
+
+            //Role and Users
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+            var userStore = new UserStore<ApplicationUser>(context);
+            var userManager = new UserManager<ApplicationUser>(userStore);
+
+
+            //Admin
             if (!context.Roles.Any(r => r.Name == adminRoleName))
             {
-                var roleStore = new RoleStore<IdentityRole>(context);
-                var roleManager = new RoleManager<IdentityRole>(roleStore);
                 var role = new IdentityRole { Name = adminRoleName };
-
                 roleManager.Create(role);
             }
 
             if (!context.Users.Any(u => u.UserName == adminUserName))
             {
-                //var hashedPassword = new PasswordHasher().HashPassword("Pa55w.rd");
-
-                var userStore = new UserStore<ApplicationUser>(context);
-                var userManager = new UserManager<ApplicationUser>(userStore);
-                var user = new ApplicationUser {
+                var user = new ApplicationUser
+                {
                     UserName = adminUserName,
-                    Email = adminUserName
+                    Email = adminEmailAddress,
+                    EmailConfirmed = true
                 };
 
                 userManager.Create(user, defaultPassword);
                 userManager.AddToRole(user.Id, adminRoleName);
             }
 
- 
+
+            //Instructor
+            if (!context.Roles.Any(r => r.Name == instructorRoleName))
+            {
+                var role = new IdentityRole { Name = instructorRoleName };
+                roleManager.Create(role);
+            }
+
+            if (!context.Users.Any(u => u.UserName == instructorUserName))
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = instructorUserName,
+                    Email = instructorEmailAddress,
+                    EmailConfirmed = true
+                };
+
+                userManager.Create(user, defaultPassword);
+                userManager.AddToRole(user.Id, instructorRoleName);
+            }
+
+
+            //Users
+            if (!context.Roles.Any(r => r.Name == usersRoleName))
+            {
+                var role = new IdentityRole { Name = usersRoleName };
+                roleManager.Create(role);
+            }
 
 
         }
