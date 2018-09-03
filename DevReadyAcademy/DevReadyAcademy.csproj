@@ -303,6 +303,10 @@
     <Compile Include="Migrations\201809030617583_SP_CalculateAverageGPA.Designer.cs">
       <DependentUpon>201809030617583_SP_CalculateAverageGPA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809031515314_ApplicationUser_AddFirstAndLastNameProperties.cs" />
+    <Compile Include="Migrations\201809031515314_ApplicationUser_AddFirstAndLastNameProperties.Designer.cs">
+      <DependentUpon>201809031515314_ApplicationUser_AddFirstAndLastNameProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -499,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809030617583_SP_CalculateAverageGPA.resx">
       <DependentUpon>201809030617583_SP_CalculateAverageGPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809031515314_ApplicationUser_AddFirstAndLastNameProperties.resx">
+      <DependentUpon>201809031515314_ApplicationUser_AddFirstAndLastNameProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\SQL\StoredProcedure\StoredProcedures.resx">
       <Generator>ResXFileCodeGenerator</Generator>

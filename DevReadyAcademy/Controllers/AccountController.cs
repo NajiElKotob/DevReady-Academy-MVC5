@@ -152,15 +152,25 @@ namespace DevReadyAcademy.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(model.FirstName.ToLower()), //https://www.dotnetperls.com/totitlecase
+                    LastName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(model.LastName.ToLower())
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
-                  
-                        await UserManager.AddToRoleAsync(user.Id, RoleName.Users);
-   
+                    //Add new users to the default role "Users"
+                    await UserManager.AddToRoleAsync(user.Id, RoleName.Users);
+
+                    // Add User Claims for first and last name
+                    await UserManager.AddClaimAsync(user.Id, new Claim("FirstName", user.FirstName));
+                    await UserManager.AddClaimAsync(user.Id, new Claim("LastName", user.LastName));
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
@@ -433,7 +443,7 @@ namespace DevReadyAcademy.Controllers
 
         private IAuthenticationManager AuthenticationManager
         {
-            get
+            get                                                     
             {
                 return HttpContext.GetOwinContext().Authentication;
             }

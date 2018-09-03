@@ -27,6 +27,7 @@ DevReady Academy - ASP.NET MVC 5
 
 ### Code First
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
+* [Calling Stored Procedures from Entity Framework Code First](http://www.codedigest.com/posts/31/calling-stored-procedures-from-entity-framework-code-first)
 
 ### WebAPI
 * [Creating Help Pages for ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages)
@@ -37,6 +38,7 @@ DevReady Academy - ASP.NET MVC 5
 * [ASP.NET MVC 5 Security And Creating User Role](https://code.msdn.microsoft.com/ASPNET-MVC-5-Security-And-44cbdb97)
 * [ASP.NET Identity Stripped Bare - MVC Part 1](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-1)
 * [ASP.NET Identity Stripped Bare - MVC Part 2](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-2)
+* [Working with Roles in ASP.NET Identity for MVC](http://www.dotnetfunda.com/articles/show/2898/working-with-roles-in-aspnet-identity-for-mvc)
 
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)

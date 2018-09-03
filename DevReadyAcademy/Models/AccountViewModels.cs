@@ -79,6 +79,15 @@ namespace DevReadyAcademy.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [DisplayAttribute(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [DisplayAttribute(Name = "Last Name")]
+        public string LastName { get; set; }
+
     }
 
     public class ResetPasswordViewModel
