@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Constants;
 using DevReadyAcademy.Models.DTOs;
 using DevReadyAcademy.Models.Repositories;
 using DevReadyAcademy.Models.ViewModels;
@@ -24,6 +25,7 @@ namespace DevReadyAcademy.Controllers
         private UnitOfWork unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
         // GET: Courses
+        [AllowAnonymous]
         public ActionResult Index()
         {
             //return View(unitOfWork.Courses.GetAll(true)); //Getting data from Cache
@@ -33,6 +35,7 @@ namespace DevReadyAcademy.Controllers
         }
 
         // GET: Courses/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -51,6 +54,7 @@ namespace DevReadyAcademy.Controllers
 
 
         // GET: Courses/Create
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Create()
         {
             ViewBag.ActionTitle = "New Course";
@@ -65,6 +69,7 @@ namespace DevReadyAcademy.Controllers
 
 
         // GET: Courses/Edit/5
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,6 +93,7 @@ namespace DevReadyAcademy.Controllers
         // POST: Courses/Save/CourseFormViewModel
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Save([Bind(Exclude = "PublishDate,FirstActivationDate")]
                                     Course course)
         {
@@ -147,6 +153,7 @@ namespace DevReadyAcademy.Controllers
 
 
         // GET: Courses/Delete/5
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -165,6 +172,7 @@ namespace DevReadyAcademy.Controllers
         // POST: Courses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult DeleteConfirmed(int id)
         {
             Course course = unitOfWork.Courses.Get(id);

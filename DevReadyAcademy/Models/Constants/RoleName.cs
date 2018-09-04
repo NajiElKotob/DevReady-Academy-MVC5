@@ -7,7 +7,7 @@ namespace DevReadyAcademy.Models.Constants
 {
     public static class RoleName
     {
-        public const string Manager = "Admin";
+        public const string Admin = "Admin";
         public const string Instructor = "Instructor";
         public const string Users = "Users"; //Default
     }

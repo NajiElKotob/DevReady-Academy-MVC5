@@ -1,14 +1,23 @@
-﻿@model IEnumerable<DevReadyAcademy.Models.Course>
+﻿@using DevReadyAcademy.Models.Constants
+
+@model IEnumerable<DevReadyAcademy.Models.Course>
 
 @{
     ViewBag.Title = "Index";
+
+    var IsAdmin = User.IsInRole(RoleName.Admin);
 }
 
 <h2>Courses</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if (IsAdmin)
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
+
 <table class="table">
     <tr>
         <th>
@@ -29,29 +38,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalHours)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @if (IsAdmin)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) @:|
+                }
+
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+
+                @if (IsAdmin)
+                {
+                    @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+            </td>
+        </tr>
+    }
 
 </table>
