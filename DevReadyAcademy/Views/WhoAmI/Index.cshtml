@@ -17,26 +17,31 @@
 <body>
     <div>
         <h2>whoami</h2>
-       
-
-        Username: @User.Identity.Name <br />
-        Is Authenticated: @User.Identity.IsAuthenticated.ToString() <br />
-        Authentication Type: @User.Identity.AuthenticationType.ToString() <br />
-        Is Admin: @User.IsInRole("Admin") <br />
-      
 
         @if (!User.Identity.IsAuthenticated)
         {
-            @Html.ActionLink("Login", "login", "account", new { ReturnUrl = "/whoami" }, null)
+            @:Who am I?
+            @Html.ActionLink("login", "login", "account", new { ReturnUrl = "/whoami" }, null)
+            @:to know!
         }
-        else {
+        else
+        {
 
-            @: <h3>Claims:</h3>
+            <text>
+            <h3>Claims:</h3>
 
-            foreach (var claim in identity.Claims)
-            {
-                @claim.Type @: : @claim.Value <br />
-            }
+            Username: @User.Identity.Name <br />
+            Is Authenticated: @User.Identity.IsAuthenticated.ToString() <br />
+            Authentication Type: @User.Identity.AuthenticationType.ToString() <br />
+            Is Admin: @User.IsInRole("Admin") <br />
+            </text>
+
+            <ul>
+                @foreach (var claim in identity.Claims)
+                {
+                <li> @claim.Type:  @claim.Value</li>
+                }
+            </ul>
         }
 
     </div>

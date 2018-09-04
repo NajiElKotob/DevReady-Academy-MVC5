@@ -40,6 +40,10 @@ DevReady Academy - ASP.NET MVC 5
 * [ASP.NET Identity Stripped Bare - MVC Part 2](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-2)
 * [Working with Roles in ASP.NET Identity for MVC](http://www.dotnetfunda.com/articles/show/2898/working-with-roles-in-aspnet-identity-for-mvc)
 
+### Razor
+* [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
+
+
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 
