@@ -1,13 +1,16 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Constants;
 using DevReadyAcademy.Models.Repositories;
+using Microsoft.AspNet.Identity;
 
 namespace DevReadyAcademy.Controllers
 {

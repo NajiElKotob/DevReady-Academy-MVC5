@@ -1,7 +1,16 @@
-﻿
+﻿@using DevReadyAcademy.BLL
+
 @{
     ViewBag.Title = "CalculateGPA";
 }
 
 <h2>CalculateGPA</h2>
-GPA: @ViewBag.AverageGPA
+<div>
+    GPA: @ViewBag.AverageGPA (@GpaConvertor.ConvertNumberToLetter(ViewBag.AverageGPA))
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to Details", "Details", new {id = Url.RequestContext.RouteData.Values["id"] })|
+    @Html.ActionLink("Back to List", "Index")
+</div>
