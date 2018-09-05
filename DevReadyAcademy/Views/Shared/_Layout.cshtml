@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using DevReadyAcademy.Models.Constants
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -33,7 +35,7 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
 
-                    @if (User.IsInRole("Admin"))
+                    @if (User.IsInRole(RoleName.Admin))
                     {
                     <li>
                         @Html.ActionLink("Manage Security", "index", "roles")

@@ -168,8 +168,8 @@ namespace DevReadyAcademy.Controllers
                     await UserManager.AddToRoleAsync(user.Id, RoleName.Users);
 
                     // Add User Claims for first and last name
-                    await UserManager.AddClaimAsync(user.Id, new Claim("FirstName", user.FirstName));
-                    await UserManager.AddClaimAsync(user.Id, new Claim("LastName", user.LastName));
+                    await UserManager.AddClaimAsync(user.Id, new Claim(ClaimType.FirstName, user.FirstName));
+                    await UserManager.AddClaimAsync(user.Id, new Claim(ClaimType.LastName, user.LastName));
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link

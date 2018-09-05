@@ -311,11 +311,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Constants\ClaimType.cs" />
     <Compile Include="Models\Constants\RoleName.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\DTOs\CourseDTO.cs" />
     <Compile Include="Models\DTOs\GpaDTO.cs" />
     <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Extensions\ClaimsPrincipalExtension.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Repositories\StudentRepository.cs" />
@@ -344,6 +346,7 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-cerulean.css" />
+    <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

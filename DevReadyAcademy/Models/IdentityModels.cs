@@ -12,10 +12,10 @@ namespace DevReadyAcademy.Models
     {
         [StringLength(30)]
         public string FirstName { get; set; }
-
+        
         [StringLength(30)]
         public string LastName { get; set; }
-
+        
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

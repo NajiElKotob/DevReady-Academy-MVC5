@@ -37,6 +37,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Display full user name instead of email in asp.net 5](https://www.electrobucket.com/programming/display-full-user-name-instead-of-email-in-asp-net-5-mvc-6)
 * [Working with Roles in ASP.NET Identity for MVC](http://www.dotnetfunda.com/articles/show/2898/working-with-roles-in-aspnet-identity-for-mvc)
 * [Relationship between tables and AspNetUsers](https://gavilan.blog/2018/04/15/relationship-between-tables-and-aspnetusers)
+* [Authenticate, Authorization and Claim](https://dev.to/rickab10/authenticate-authorization-and-claim-all-you-need-to-know-in-aspnet-core-ahn)
 
 ### Performance
 * [Bundling and Minification](https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification)
@@ -49,6 +50,8 @@ DevReady Academy - ASP.NET MVC 5
 
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
+* [Datepicker | bootstrap-datepicker sandbox](https://uxsolutions.github.io/bootstrap-datepicker/?#sandbox)
+
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
 
 ### Templates and Theme

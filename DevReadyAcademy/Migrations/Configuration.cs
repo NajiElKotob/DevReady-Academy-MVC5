@@ -1,12 +1,14 @@
 namespace DevReadyAcademy.Migrations
 {
     using DevReadyAcademy.Models;
+    using DevReadyAcademy.Models.Constants;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Security.Claims;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DevReadyAcademy.Models.ApplicationDbContext>
     {
@@ -50,15 +52,16 @@ namespace DevReadyAcademy.Migrations
 
 
             //Users and Roles
-            var adminRoleName = "Admin";
+            var adminRoleName = RoleName.Admin;
             var adminUserName = "naji@dotnetheroes.local";
             var adminEmailAddress = "naji@dotnetheroes.local";
 
-            var instructorRoleName = "Instructor";
+            var instructorRoleName = RoleName.Instructor;
             var instructorUserName = "instructor@dotnetheroes.local";
             var instructorEmailAddress = "instructor@dotnetheroes.local";
 
-            var usersRoleName = "Users";
+            var usersRoleName = RoleName.Users;
+
 
             var defaultPassword = "Pa55w.rd";
             //var hashedPassword = new PasswordHasher().HashPassword("Pa55w.rd");
@@ -84,11 +87,25 @@ namespace DevReadyAcademy.Migrations
                 {
                     UserName = adminUserName,
                     Email = adminEmailAddress,
+                    FirstName = "Admin",
+                    LastName = string.Empty,
                     EmailConfirmed = true
                 };
 
-                userManager.Create(user, defaultPassword);
-                userManager.AddToRole(user.Id, adminRoleName);
+
+                var result = userManager.Create(user, defaultPassword);
+
+
+                if (result.Succeeded)
+                {
+                    //Assign User to a Role
+                    userManager.AddToRole(user.Id, adminRoleName);
+
+                    // Add User Claims for first and last name
+                    userManager.AddClaim(user.Id, new Claim(ClaimType.FirstName, user.FirstName));
+                    userManager.AddClaim(user.Id, new Claim(ClaimType.LastName, user.LastName));
+                }
+
             }
 
 
@@ -105,11 +122,27 @@ namespace DevReadyAcademy.Migrations
                 {
                     UserName = instructorUserName,
                     Email = instructorEmailAddress,
+                    FirstName = "Instructor",
+                    LastName = string.Empty,
                     EmailConfirmed = true
                 };
 
-                userManager.Create(user, defaultPassword);
-                userManager.AddToRole(user.Id, instructorRoleName);
+                var result = userManager.Create(user, defaultPassword);
+
+
+
+
+                if (result.Succeeded)
+                {
+                    //Assign User to a Role
+                    userManager.AddToRole(user.Id, instructorRoleName);
+
+                    // Add User Claims for first and last name
+                    userManager.AddClaim(user.Id, new Claim(ClaimType.FirstName, user.FirstName));
+                    userManager.AddClaim(user.Id, new Claim(ClaimType.LastName, user.LastName));
+                }
+
+
             }
 
 

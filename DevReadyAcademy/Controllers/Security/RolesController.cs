@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Constants;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -16,7 +17,7 @@ namespace DevReadyAcademy.Controllers.Security
         private ApplicationDbContext context = new ApplicationDbContext();
 
         // GET: Roles
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Index()
         {
             return View();
@@ -24,7 +25,7 @@ namespace DevReadyAcademy.Controllers.Security
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = RoleName.Admin)]
         public ActionResult Create(FormCollection collection)
         {
             try

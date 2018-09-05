@@ -22,6 +22,7 @@ namespace DevReadyAcademy.Migrations
 
             //Use Embedded Resources/SQL files instead of the concatenated text
             Sql(StoredProcedures.usp_CalculateAverageGPA_Up__1809030001);
+ 
         }
 
         public override void Down()
