@@ -4,6 +4,7 @@ DevReady Academy - ASP.NET MVC 5
 ## References
 
 ### Razor
+* [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
 * [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
 
 ### Code First
@@ -22,6 +23,10 @@ DevReady Academy - ASP.NET MVC 5
 * [Creating Help Pages for ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages)
 * [Routing in ASP.NET Web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api)
 * [My two cents on using the IHttpActionResult interface in WebAPI](https://www.infoworld.com/article/3192176/application-development/my-two-cents-on-using-the-ihttpactionresult-interface-in-webapi.html)
+* [Postman](https://www.getpostman.com)
+
+### WebAPI
+* [jQuery AJAX] (http://api.jquery.com/jquery.ajax)
 
 ### DTO
 * [Mapping Entity Framework Entities to DTOs with AutoMapper](https://exceptionnotfound.net/entity-framework-and-wcf-mapping-entities-to-dtos-with-automapper)
@@ -51,7 +56,7 @@ DevReady Academy - ASP.NET MVC 5
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 * [Datepicker | bootstrap-datepicker sandbox](https://uxsolutions.github.io/bootstrap-datepicker/?#sandbox)
-
+* [Chosen - jQuery plugin](https://harvesthq.github.io/chosen)
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
 
 ### Templates and Theme
@@ -60,10 +65,13 @@ DevReady Academy - ASP.NET MVC 5
 
 ### Deployment
 * [Try Azure App Service](http://bit.ly/TryAzureAppServiceForFree)
+* [Deploying to IIS](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)
 
 ### General Knowledge
 * [What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn)
 
+### Other Samples
+* [The Contoso University Sample](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)
 
 
 
