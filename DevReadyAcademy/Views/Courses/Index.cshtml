@@ -57,16 +57,23 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                @if (IsAdmin)
-                {
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) @:|
-                }
-
-                @Html.ActionLink("Details", "Details", new { id = item.Id })
+                @*@Html.ActionLink("Details", "Details", new { id = item.Id })*@
+                <a href="@Url.Action("Details", new { id = item.Id })">
+                    <img title="Details" alt="Details" style="width:32px;" src="~/Assets/Icons/details.png" />
+                </a>
 
                 @if (IsAdmin)
                 {
-                    @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) @:|
+                        @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+
+                    <a href="@Url.Action("Edit", new { id = item.Id })">
+                        <img title="Edit" alt="Edit" style="width:32px;" src="~/Assets/Icons/edit.png" />
+                    </a>
+
+                    <a href="@Url.Action("Delete", new { id = item.Id })">
+                        <img title="Delete" alt="Delete" style="width:32px;" src="~/Assets/Icons/delete.png" />
+                    </a>
                 }
             </td>
         </tr>
