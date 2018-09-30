@@ -11,6 +11,9 @@ DevReady Academy - ASP.NET MVC 5
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Calling Stored Procedures from Entity Framework Code First](http://www.codedigest.com/posts/31/calling-stored-procedures-from-entity-framework-code-first)
 
+### Entity Framework
+* [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
+
 ### LINQ
 * [LINQ Single vs SingleOrDefault vs First vs FirstOrDefault](http://www.technicaloverload.com/linq-single-vs-singleordefault-vs-first-vs-firstordefault/)
 * [Find vs. FirstOrDefault](https://arwsoftware.wordpress.com/2017/02/04/entity-framework-find-vs-firstordefault)

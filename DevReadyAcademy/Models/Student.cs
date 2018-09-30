@@ -27,6 +27,9 @@ namespace DevReadyAcademy.Models
         [Display(Name = "Registration Date")]
         public DateTime RegistrationDate { get; set; }
 
+        public byte[] Photo { get; set; }
+        public string PhotoType { get; set; }
+
         public virtual IEnumerable<Enrollment> Enrollments { get; set; }
 
         [Display(Name = "Name")]

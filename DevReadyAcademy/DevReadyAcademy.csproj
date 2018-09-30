@@ -308,6 +308,10 @@
     <Compile Include="Migrations\201809031515314_ApplicationUser_AddFirstAndLastNameProperties.Designer.cs">
       <DependentUpon>201809031515314_ApplicationUser_AddFirstAndLastNameProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809292114476_Student_AddPhoto.cs" />
+    <Compile Include="Migrations\201809292114476_Student_AddPhoto.Designer.cs">
+      <DependentUpon>201809292114476_Student_AddPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -514,6 +518,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809031515314_ApplicationUser_AddFirstAndLastNameProperties.resx">
       <DependentUpon>201809031515314_ApplicationUser_AddFirstAndLastNameProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809292114476_Student_AddPhoto.resx">
+      <DependentUpon>201809292114476_Student_AddPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\SQL\StoredProcedure\StoredProcedures.resx">
       <Generator>ResXFileCodeGenerator</Generator>

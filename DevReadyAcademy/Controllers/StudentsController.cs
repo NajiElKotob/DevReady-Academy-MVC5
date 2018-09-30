@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
+﻿using DevReadyAcademy.Models;
+using DevReadyAcademy.Models.Repositories;
+using System;
+using System.IO;
 using System.Net;
-using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
-using DevReadyAcademy.Models;
-using DevReadyAcademy.Models.Constants;
-using DevReadyAcademy.Models.Repositories;
-using Microsoft.AspNet.Identity;
 
 namespace DevReadyAcademy.Controllers
 {
@@ -43,7 +37,9 @@ namespace DevReadyAcademy.Controllers
         // GET: Students/Create
         public ActionResult Create()
         {
-            return View();
+            var student = new Student() { RegistrationDate = DateTime.Now };
+
+            return View(student);
         }
 
         // POST: Students/Create
@@ -51,10 +47,24 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,RegistrationDate")] Student student)
+        public ActionResult Create(Student student, HttpPostedFileBase studentPhoto)
         {
             if (ModelState.IsValid)
             {
+
+                if (studentPhoto != null && studentPhoto.ContentLength > 0)
+                {
+
+                    using (var reader = new System.IO.BinaryReader(studentPhoto.InputStream))
+                    {
+                        student.Photo = reader.ReadBytes(studentPhoto.ContentLength);
+                        //Or HttpPostedFileBase Photo = Request.Files["studentPhoto"];
+
+                        student.PhotoType = studentPhoto.ContentType;
+                    }
+                }
+
+
                 db.Students.Add(student);
                 db.Save();
                 return RedirectToAction("Index");
@@ -83,10 +93,22 @@ namespace DevReadyAcademy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,RegistrationDate")] Student student)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,RegistrationDate")] Student student, HttpPostedFileBase studentPhoto)
         {
             if (ModelState.IsValid)
             {
+                if (studentPhoto != null && studentPhoto.ContentLength > 0)
+                {
+
+                    using (var reader = new System.IO.BinaryReader(studentPhoto.InputStream))
+                    {
+                        student.Photo = reader.ReadBytes(studentPhoto.ContentLength);
+                        //Or HttpPostedFileBase Photo = Request.Files["studentPhoto"];
+
+                        student.PhotoType = studentPhoto.ContentType;
+                    }
+                }
+
                 db.Students.Update(student);
                 db.Save();
                 return RedirectToAction("Index");

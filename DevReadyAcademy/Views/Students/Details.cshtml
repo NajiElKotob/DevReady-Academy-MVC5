@@ -9,7 +9,22 @@
 <div>
     <h4>Student</h4>
     <hr />
+
+
     <dl class="dl-horizontal">
+        <dt>
+
+        </dt>
+        <dd>
+            <div class="form-group">
+                @if (Model.Photo != null)
+                {
+                    string imageBase64 = Convert.ToBase64String(Model.Photo);
+                    string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                    <img src="@imageSrc" width="100" />
+                }
+            </div>
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
