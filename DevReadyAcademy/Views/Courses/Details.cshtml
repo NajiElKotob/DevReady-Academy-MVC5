@@ -1,4 +1,6 @@
-﻿@model DevReadyAcademy.Models.Course
+﻿@using HelperExtensions
+
+@model DevReadyAcademy.Models.Course
 
 @{
     ViewBag.Title = "Details";
@@ -52,6 +54,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.TotalHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoURL)
+        </dt>
+
+        <dd>
+            <a href="@Model.VideoURL" target="_blank">@Model.VideoURL</a>
         </dd>
 
         <dt>

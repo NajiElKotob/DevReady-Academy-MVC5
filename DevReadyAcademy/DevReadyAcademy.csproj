@@ -312,6 +312,10 @@
     <Compile Include="Migrations\201809292114476_Student_AddPhoto.Designer.cs">
       <DependentUpon>201809292114476_Student_AddPhoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810020902162_Course_AddVideoURL.cs" />
+    <Compile Include="Migrations\201810020902162_Course_AddVideoURL.Designer.cs">
+      <DependentUpon>201810020902162_Course_AddVideoURL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -522,10 +526,19 @@
     <EmbeddedResource Include="Migrations\201809292114476_Student_AddPhoto.resx">
       <DependentUpon>201809292114476_Student_AddPhoto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810020902162_Course_AddVideoURL.resx">
+      <DependentUpon>201810020902162_Course_AddVideoURL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\SQL\StoredProcedure\StoredProcedures.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StoredProcedures.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelperExtensions\HelperExtensions.csproj">
+      <Project>{e1010176-c77c-4ed6-b0db-87d91d450ed8}</Project>
+      <Name>HelperExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

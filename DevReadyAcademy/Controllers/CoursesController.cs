@@ -131,6 +131,7 @@ namespace DevReadyAcademy.Controllers
                 courseInDb.CourseVersion = course.CourseVersion;
                 courseInDb.Description = course.Description;
                 courseInDb.TotalHours = course.TotalHours;
+                courseInDb.VideoURL = course.VideoURL;
                 courseInDb.IsActive = course.IsActive;
                 courseInDb.CategoryId = course.CategoryId;
 

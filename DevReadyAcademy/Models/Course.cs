@@ -34,6 +34,10 @@ namespace DevReadyAcademy.Models
         [Display(Name = "Hours")]
         public int TotalHours { get; set; }
 
+        [Display(Name = "Video Link")]
+        [StringLength(250)]
+        public string VideoURL { get; set; }
+
         [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
