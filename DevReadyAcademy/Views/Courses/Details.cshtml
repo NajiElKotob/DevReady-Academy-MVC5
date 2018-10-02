@@ -61,7 +61,10 @@
         </dt>
 
         <dd>
-            <a href="@Model.VideoURL" target="_blank">@Model.VideoURL</a>
+            @Html.ActionLink(Model.VideoURL, "", "", "https", Model.VideoURL, "", null, new { target = "_blank" })
+
+            @*@Html.ExternalLink(Model.VideoURL, Model.VideoURL)*@
+
         </dd>
 
         <dt>

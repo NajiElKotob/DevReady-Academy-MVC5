@@ -6,6 +6,7 @@ DevReady Academy - ASP.NET MVC 5
 ### Razor
 * [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
 * [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
+* [ASP.NET Core MVC Anchor Tag Helper](https://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx)
 
 ### Code First
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
@@ -29,7 +30,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Postman](https://www.getpostman.com)
 
 ### WebAPI
-* [jQuery AJAX] (http://api.jquery.com/jquery.ajax)
+* [jQuery AJAX](http://api.jquery.com/jquery.ajax)
 
 ### DTO
 * [Mapping Entity Framework Entities to DTOs with AutoMapper](https://exceptionnotfound.net/entity-framework-and-wcf-mapping-entities-to-dtos-with-automapper)
@@ -65,6 +66,10 @@ DevReady Academy - ASP.NET MVC 5
 ### Templates and Theme
 * [Free Bootstrap Themes & Templates](https://startbootstrap.com/)
 * [Free themes and CSS for Bootstrap](https://bootswatch.com/)
+
+### Advanced Topics
+* [Creating Custom HTML Helpers](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs)
+
 
 ### Deployment
 * [Try Azure App Service](http://bit.ly/TryAzureAppServiceForFree)
