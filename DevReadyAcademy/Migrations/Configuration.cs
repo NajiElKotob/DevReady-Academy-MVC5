@@ -53,8 +53,8 @@ namespace DevReadyAcademy.Migrations
 
             //Users and Roles
             var adminRoleName = RoleName.Admin;
-            var adminUserName = "naji@dotnetheroes.local";
-            var adminEmailAddress = "naji@dotnetheroes.local";
+            var adminUserName = "admin@devready.local";
+            var adminEmailAddress = "admin@devready.local";
 
             var instructorRoleName = RoleName.Instructor;
             var instructorUserName = "instructor@dotnetheroes.local";

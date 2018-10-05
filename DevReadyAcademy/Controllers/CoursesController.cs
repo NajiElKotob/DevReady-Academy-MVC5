@@ -127,6 +127,12 @@ namespace DevReadyAcademy.Controllers
                     return HttpNotFound();
                 }
 
+                //TODO: Review the security AND business logic                
+                if (course.IsActive == true && courseInDb.IsActive == false)
+                {
+                    courseInDb.FirstActivationDate = DateTime.Now;
+                }
+
                 courseInDb.CourseNumber = course.CourseNumber;
                 courseInDb.CourseVersion = course.CourseVersion;
                 courseInDb.Description = course.Description;
@@ -134,13 +140,6 @@ namespace DevReadyAcademy.Controllers
                 courseInDb.VideoURL = course.VideoURL;
                 courseInDb.IsActive = course.IsActive;
                 courseInDb.CategoryId = course.CategoryId;
-
-                //TODO: Review the security AND business logic
-                if (course.IsActive == true && courseInDb.IsActive == false)
-                {
-                    courseInDb.FirstActivationDate = DateTime.Now;
-                }
-
 
 
                // unitOfWork.Courses.Update(course); //https://msdn.microsoft.com/en-us/library/jj592676%28v=vs.113%29.aspx
