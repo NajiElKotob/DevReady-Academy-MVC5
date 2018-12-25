@@ -1,19 +1,49 @@
 # DevReady Academy
 DevReady Academy - ASP.NET MVC 5
 
+## Table of contents
+
+* [Books :star2:](#books)
+* [Razor](#razor)
+* [Entity Framework](#entity-framework)
+* [Code First](#code-first)
+* [LINQ](#linq)
+* [Repository and UoW](#repository-and-uow)
+* [WebAPI](#webapi)
+* [jQuery](#jquery)
+* [DTO](#dto)
+* [Security](#security)
+* [Performance](#performance)
+* [Tables](#tables)
+* [UI](#ui)
+* [UX](#ux)
+* [Templates and Theme](#templates-and-theme)
+* [Advanced Topics](#advanced-topics)
+* [Deployment](#deployment)
+* [General Knowledge](#general-knowledge)
+* [Other Samples](#other-samples)
+
+
+## Books
+* [Professional ASP.NET MVC 5](https://amzn.to/2V9uCB5) - Jon Galloway
+* [Exam Ref 70-486: Developing ASP.NET MVC 4 Web Applications](https://amzn.to/2BG5CZ5) - William Penberthy 
+
 ## References
 
 ### Razor
 * [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
-* [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
+* [ASP.NET MVC 3: Razorâ€™s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
 * [ASP.NET Core MVC Anchor Tag Helper](https://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx)
+
+### Entity Framework
+* [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
+* [EF Migrations Command Reference](https://coding.abel.nu/2012/03/ef-migrations-command-reference/) - Anders Abel
+
 
 ### Code First
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Calling Stored Procedures from Entity Framework Code First](http://www.codedigest.com/posts/31/calling-stored-procedures-from-entity-framework-code-first)
 
-### Entity Framework
-* [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
 
 ### LINQ
 * [LINQ Single vs SingleOrDefault vs First vs FirstOrDefault](http://www.technicaloverload.com/linq-single-vs-singleordefault-vs-first-vs-firstordefault/)
@@ -29,7 +59,7 @@ DevReady Academy - ASP.NET MVC 5
 * [My two cents on using the IHttpActionResult interface in WebAPI](https://www.infoworld.com/article/3192176/application-development/my-two-cents-on-using-the-ihttpactionresult-interface-in-webapi.html)
 * [Postman](https://www.getpostman.com)
 
-### WebAPI
+### jQuery
 * [jQuery AJAX](http://api.jquery.com/jquery.ajax)
 
 ### DTO
@@ -62,6 +92,9 @@ DevReady Academy - ASP.NET MVC 5
 * [Datepicker | bootstrap-datepicker sandbox](https://uxsolutions.github.io/bootstrap-datepicker/?#sandbox)
 * [Chosen - jQuery plugin](https://harvesthq.github.io/chosen)
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
+
+### UX
+* [Good UI](http://www.goodui.org)
 
 ### Templates and Theme
 * [Free Bootstrap Themes & Templates](https://startbootstrap.com/)
