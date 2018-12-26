@@ -34,7 +34,8 @@ DevReady Academy - ASP.NET MVC 5
 * [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
 * [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
 * [ASP.NET Core MVC Anchor Tag Helper](https://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx)
-
+* [TutorialTeacher - Razor](http://www.tutorialsteacher.com/mvc/razor-syntax)
+  
 ### Entity Framework
 * [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
 * [EF Migrations Command Reference](https://coding.abel.nu/2012/03/ef-migrations-command-reference/) - Anders Abel
