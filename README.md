@@ -20,6 +20,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Templates and Theme](#templates-and-theme)
 * [Advanced Topics](#advanced-topics)
 * [Deployment](#deployment)
+* [Unit Tests](#unit-tests)
 * [General Knowledge](#general-knowledge)
 * [Other Samples](#other-samples)
 
@@ -109,6 +110,10 @@ DevReady Academy - ASP.NET MVC 5
 ### Deployment
 * [Try Azure App Service](http://bit.ly/TryAzureAppServiceForFree)
 * [Deploying to IIS](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)
+
+### Unit Tests
+* [Unit test basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)
+* [Creating Unit Tests for ASP.NET MVC](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs)
 
 ### General Knowledge
 * [What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn)
