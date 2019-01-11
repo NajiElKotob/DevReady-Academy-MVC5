@@ -15,6 +15,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Security](#security)
 * [Performance](#performance)
 * [Tables](#tables)
+* [AJAX](#ajax)
 * [UI](#ui)
 * [UX](#ux)
 * [Templates and Theme](#templates-and-theme)
@@ -88,6 +89,9 @@ DevReady Academy - ASP.NET MVC 5
 ### Tables
 * [DataTables](https://datatables.net/)
 * [FooTable](https://fooplugins.github.io/FooTable/)
+
+### AJAX
+* [Ajax.ActionLink and Html.ActionLink](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/ajax-actionlink-and-html-actionlink-in-mvc)
 
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
