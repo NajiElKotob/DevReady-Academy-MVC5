@@ -35,6 +35,7 @@ DevReady Academy - ASP.NET MVC 5
 
 ### Routing
 * [Creating Custom Routes](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-cs)
+* [Attribute Routing in ASP.NET MVC 5](https://blogs.msdn.microsoft.com/webdev/2013/10/17/attribute-routing-in-asp-net-mvc-5)
 
 ### Razor
 * [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
