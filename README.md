@@ -17,12 +17,13 @@ DevReady Academy - ASP.NET MVC 5
 * [Performance](#performance)
 * [Tables](#tables)
 * [AJAX](#ajax)
-* [UI](#ui)
 * [UX](#ux)
+* [UI](#ui)
 * [Templates and Theme](#templates-and-theme)
 * [Advanced Topics](#advanced-topics)
-* [Deployment](#deployment)
 * [Unit Tests](#unit-tests)
+* [Validation](#validation)
+* [Deployment](#deployment)
 * [General Knowledge](#general-knowledge)
 * [Other Samples](#other-samples)
 
@@ -98,14 +99,14 @@ DevReady Academy - ASP.NET MVC 5
 ### AJAX
 * [Ajax.ActionLink and Html.ActionLink](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/ajax-actionlink-and-html-actionlink-in-mvc)
 
+### UX
+* [Good UI](http://www.goodui.org)
+
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 * [Datepicker | bootstrap-datepicker sandbox](https://uxsolutions.github.io/bootstrap-datepicker/?#sandbox)
 * [Chosen - jQuery plugin](https://harvesthq.github.io/chosen)
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
-
-### UX
-* [Good UI](http://www.goodui.org)
 
 ### Templates and Theme
 * [Free Bootstrap Themes & Templates](https://startbootstrap.com/)
@@ -115,19 +116,23 @@ DevReady Academy - ASP.NET MVC 5
 ### Advanced Topics
 * [Creating Custom HTML Helpers](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs)
 
-
-### Deployment
-* [Try Azure App Service](http://bit.ly/TryAzureAppServiceForFree)
-* [Deploying to IIS](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)
+### Validation
+* [RegexOne](https://regexone.com/lesson/introduction_abcs) — Learn Regular Expressions with simple, interactive exercises
+* [Regex tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285) — A quick cheatsheet by examples
 
 ### Unit Tests
 * [Unit test basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)
 * [Creating Unit Tests for ASP.NET MVC](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs)
 
-
-
 ### Debugging
-*  [Attribute Routing in ASP.NET MVC 5](https://blogs.msdn.microsoft.com/webdev/2013/10/17/attribute-routing-in-asp-net-mvc-5/)
+*  [Chrome DevTools](https://blogs.msdn.microsoft.com/webdev/2013/10/17/attribute-routing-in-asp-net-mvc-5/) - Get Started with Debugging JavaScript in Chrome DevTools
+* [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger) - Debugger
+
+
+### Deployment
+* [Try Azure App Service](http://bit.ly/TryAzureAppServiceForFree)
+* [Deploying to IIS](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)
+
 
 ### General Knowledge
 * [What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn)
