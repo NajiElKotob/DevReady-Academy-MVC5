@@ -22,6 +22,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Templates and Theme](#templates-and-theme)
 * [Advanced Topics](#advanced-topics)
 * [Unit Tests](#unit-tests)
+* [Debugging](#debugging)
 * [Validation](#validation)
 * [Deployment](#deployment)
 * [General Knowledge](#general-knowledge)
