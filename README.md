@@ -26,7 +26,9 @@ DevReady Academy - ASP.NET MVC 5
 * [Validation](#validation)
 * [Deployment](#deployment)
 * [General Knowledge](#general-knowledge)
+* [Learning](#learning)
 * [Other Samples](#other-samples)
+
 
 
 ## Books
@@ -80,6 +82,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Using AutoMapper in MVC](https://www.c-sharpcorner.com/UploadFile/tirthacs/using-automapper-in-mvc/)
 
 ### Security
+* [Introduction to ASP.NET Identity](https://docs.microsoft.com/en-us/aspnet/identity/overview/getting-started/introduction-to-aspnet-identity)
 * [ASP.NET MVC 5 Security And Creating User Role](https://code.msdn.microsoft.com/ASPNET-MVC-5-Security-And-44cbdb97)
 * [ASP.NET Identity Stripped Bare - MVC Part 1](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-1)
 * [ASP.NET Identity Stripped Bare - MVC Part 2](http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-2)
@@ -137,6 +140,10 @@ DevReady Academy - ASP.NET MVC 5
 
 ### General Knowledge
 * [What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn)
+
+
+### Learning
+* [MVC Video Training from Pluralsight](https://docs.microsoft.com/en-us/aspnet/mvc/pluralsight)
 
 ### Other Samples
 * [The Contoso University Sample](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)
