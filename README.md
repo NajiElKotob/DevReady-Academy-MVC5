@@ -24,6 +24,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Unit Tests](#unit-tests)
 * [Debugging](#debugging)
 * [Validation](#validation)
+* [Online Tools](#online-tools)
 * [Deployment](#deployment)
 * [General Knowledge](#general-knowledge)
 * [Learning](#learning)
@@ -93,7 +94,6 @@ DevReady Academy - ASP.NET MVC 5
 
 ### Performance
 * [Bundling and Minification](https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification)
-* [Website Speed Test](https://tools.pingdom.com)
 * [Profile and debug your ASP.NET MVC app with Glimpse](https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse)
 
 ### Tables
@@ -123,6 +123,10 @@ DevReady Academy - ASP.NET MVC 5
 ### Validation
 * [RegexOne](https://regexone.com/lesson/introduction_abcs) — Learn Regular Expressions with simple, interactive exercises
 * [Regex tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285) — A quick cheatsheet by examples
+
+### Online Tools
+* [Can I Use](https://caniuse.com) - Browser support tables for modern web technologies
+* [Website Speed Test](https://tools.pingdom.com)
 
 ### Unit Tests
 * [Unit test basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)
