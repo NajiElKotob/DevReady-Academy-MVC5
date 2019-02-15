@@ -11,6 +11,7 @@ DevReady Academy - ASP.NET MVC 5
 * [LINQ](#linq)
 * [Repository and UoW](#repository-and-uow)
 * [WebAPI](#webapi)
+* [JSON and XML](#json-and-xml)
 * [jQuery](#jquery)
 * [DTO](#dto)
 * [Security](#security)
@@ -71,6 +72,10 @@ DevReady Academy - ASP.NET MVC 5
 * [Routing in ASP.NET Web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api)
 * [My two cents on using the IHttpActionResult interface in WebAPI](https://www.infoworld.com/article/3192176/application-development/my-two-cents-on-using-the-ihttpactionresult-interface-in-webapi.html)
 * [Postman](https://www.getpostman.com)
+
+### JSON and XML
+* [Json.NET](https://www.newtonsoft.com) - JSON framework for .NET
+* [JSON Formatter](https://jsonformatter.org) - JSON Formatter and Converter
 
 ### jQuery
 * [jQuery AJAX](http://api.jquery.com/jquery.ajax)
