@@ -18,6 +18,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Performance](#performance)
 * [Tables](#tables)
 * [AJAX](#ajax)
+* [HTML5](#html5)
 * [UX](#ux)
 * [UI](#ui)
 * [Templates and Theme](#templates-and-theme)
@@ -107,6 +108,9 @@ DevReady Academy - ASP.NET MVC 5
 
 ### AJAX
 * [Ajax.ActionLink and Html.ActionLink](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/ajax-actionlink-and-html-actionlink-in-mvc)
+
+### HTML5
+* [Semantic HTML5 for Document Structure](https://www.semrush.com/blog/semantic-html5-guide)
 
 ### UX
 * [Good UI](http://www.goodui.org)
