@@ -118,6 +118,7 @@ DevReady Academy - ASP.NET MVC 5
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 * [Datepicker | bootstrap-datepicker sandbox](https://uxsolutions.github.io/bootstrap-datepicker/?#sandbox)
+* [bootstrap-select](https://developer.snapappointments.com/bootstrap-select)
 * [Chosen - jQuery plugin](https://harvesthq.github.io/chosen)
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
 
