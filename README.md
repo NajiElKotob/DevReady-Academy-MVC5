@@ -114,6 +114,7 @@ DevReady Academy - ASP.NET MVC 5
 
 ### UX
 * [Good UI](http://www.goodui.org)
+* [UX Design vs UI Design](https://www.youtube.com/watch?v=RtPnVtXw6HU) - What's the Difference? Which one is right for me?
 
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
