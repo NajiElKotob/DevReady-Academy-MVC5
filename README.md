@@ -115,6 +115,7 @@ DevReady Academy - ASP.NET MVC 5
 ### UX
 * [Good UI](http://www.goodui.org)
 * [UX Design vs UI Design](https://www.youtube.com/watch?v=RtPnVtXw6HU) - What's the Difference? Which one is right for me?
+* [Printable Grids for Design Wireframing](https://sneakpeekit.com/) - Planning apps or websites is not always completely digital: sometimes you may need pencil, paper and some good sketch sheet templates to speed up your creative process.
 
 ### UI
 * [Datepicker | bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
