@@ -111,6 +111,8 @@ DevReady Academy - ASP.NET MVC 5
 
 ### HTML5
 * [Semantic HTML5 for Document Structure](https://www.semrush.com/blog/semantic-html5-guide)
+* [HTML Tutorial](https://websitesetup.org/html-tutorial-beginners/) - Learn HTML, step-by-step
+* [HTML Cheat Sheet](https://websitesetup.org/html5-cheat-sheet/)
 
 ### UX
 * [Good UI](http://www.goodui.org)
