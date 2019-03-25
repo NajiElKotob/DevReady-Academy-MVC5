@@ -21,6 +21,7 @@ DevReady Academy - ASP.NET MVC 5
 * [HTML5](#html5)
 * [UX](#ux)
 * [UI](#ui)
+* [Colors](#colors)
 * [Templates and Theme](#templates-and-theme)
 * [Advanced Topics](#advanced-topics)
 * [Unit Tests](#unit-tests)
@@ -126,6 +127,10 @@ DevReady Academy - ASP.NET MVC 5
 * [Bootstrap Resources](https://startbootstrap.com/bootstrap-resources) - A curated list of quality Bootstrap resources and Bootstrap plugins maintained by Start Bootstrap.
 * [Chosen - jQuery plugin](https://harvesthq.github.io/chosen)
 * [35 Best Toast Notification jQuery Plugins Of 2017](https://www.jqueryscript.net/blog/Best-Toast-Notification-jQuery-Plugins.html)
+
+### Colors
+* [Color Palettes](https://www.astellescolors.com/)
+* [Adobe Color](https://color.adobe.com/)
 
 ### Templates and Theme
 * [Free Bootstrap Themes & Templates](https://startbootstrap.com/)
