@@ -19,6 +19,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Tables](#tables)
 * [AJAX](#ajax)
 * [HTML5](#html5)
+* [CSS3](#css3)
 * [UX](#ux)
 * [UI](#ui)
 * [Colors](#colors)
@@ -114,6 +115,9 @@ DevReady Academy - ASP.NET MVC 5
 * [Semantic HTML5 for Document Structure](https://www.semrush.com/blog/semantic-html5-guide)
 * [HTML Tutorial](https://websitesetup.org/html-tutorial-beginners/) - Learn HTML, step-by-step
 * [HTML Cheat Sheet](https://websitesetup.org/html5-cheat-sheet/)
+
+### CSS3
+* [Animate.css](https://daneden.github.io/animate.css/)
 
 ### UX
 * [Good UI](http://www.goodui.org)
