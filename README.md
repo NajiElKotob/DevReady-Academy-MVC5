@@ -110,6 +110,7 @@ DevReady Academy - ASP.NET MVC 5
 
 ### AJAX
 * [Ajax.ActionLink and Html.ActionLink](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/ajax-actionlink-and-html-actionlink-in-mvc)
+* [jQuery Ajax Tutorial #1 - Using AJAX & API's (Video)](https://youtu.be/fEYx8dQr_cQ) - Shared by Ibrahim Antoun
 
 ### HTML5
 * [Semantic HTML5 for Document Structure](https://www.semrush.com/blog/semantic-html5-guide)
