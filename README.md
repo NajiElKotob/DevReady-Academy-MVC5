@@ -154,6 +154,7 @@ DevReady Academy - ASP.NET MVC 5
 ### Online Tools
 * [Can I Use](https://caniuse.com) - Browser support tables for modern web technologies
 * [Website Speed Test](https://tools.pingdom.com)
+* [DNS](https://securitytrails.com/dns-trails) - The World's Largest Repository of historical DNS data
 
 ### Unit Tests
 * [Unit test basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)
