@@ -29,6 +29,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Debugging](#debugging)
 * [Validation](#validation)
 * [Online Tools](#online-tools)
+* [HTML Editors](#html-editors)
 * [Deployment](#deployment)
 * [General Knowledge](#general-knowledge)
 * [Learning](#learning)
@@ -155,6 +156,14 @@ DevReady Academy - ASP.NET MVC 5
 * [Can I Use](https://caniuse.com) - Browser support tables for modern web technologies
 * [Website Speed Test](https://tools.pingdom.com)
 * [DNS](https://securitytrails.com/dns-trails) - The World's Largest Repository of historical DNS data
+
+### HTML Editors
+
+* [Notepad++](https://notepad-plus-plus.org/)
+* [Sublime](https://www.sublimetext.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+    * [HTML in Visual Studio Code](https://code.visualstudio.com/docs/languages/html)
+* [Brackets](http://brackets.io/) - A modern, open source text editor that understands web design.
 
 ### Unit Tests
 * [Unit test basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)
