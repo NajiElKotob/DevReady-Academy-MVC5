@@ -2,7 +2,7 @@
 DevReady Academy - ASP.NET MVC 5
 
 ## Table of contents
-
+* [What is MVC](#what-is-mvc)
 * [Books :star2:](#books)
 * [Razor](#razor)
 * [Routing](#routing)
@@ -36,6 +36,8 @@ DevReady Academy - ASP.NET MVC 5
 * [Other Samples](#other-samples)
 
 
+## What is MVC
+* [What Is MVC? Simple Explanation (Video)](https://www.youtube.com/watch?v=pCvZtjoRq1I) - Ignore the code at 7:07, just focus on the concept.
 
 ## Books
 * [Professional ASP.NET MVC 5](https://amzn.to/2V9uCB5) - Jon Galloway
