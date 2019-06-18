@@ -156,9 +156,11 @@ DevReady Academy - ASP.NET MVC 5
 * [Can I Use](https://caniuse.com) - Browser support tables for modern web technologies
 * [Website Speed Test](https://tools.pingdom.com)
 * [DNS](https://securitytrails.com/dns-trails) - The World's Largest Repository of historical DNS data
-
+* Identify technology on websites 
+    * [BuiltWith](https://builtwith.com/)
+    * [Wappalyzer](https://www.wappalyzer.com/)
+    
 ### HTML Editors
-
 * [Notepad++](https://notepad-plus-plus.org/)
 * [Sublime](https://www.sublimetext.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
