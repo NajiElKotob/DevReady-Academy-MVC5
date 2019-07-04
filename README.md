@@ -7,7 +7,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Tutorials](#tutorials)
 * [Routing](#routing)
 * [Razor](#razor)
-* [ORM](#orm]
+* [ORM](#orm)
   * [Entity Framework](#entity-framework)
   * [Code First](#code-first)
   * [LINQ](#linq)
