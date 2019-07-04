@@ -7,7 +7,7 @@ DevReady Academy - ASP.NET MVC 5
 * [Tutorials](#tutorials)
 * [Routing](#routing)
 * [Razor](#razor)
-* OMR
+* [ORM](#orm]
   * [Entity Framework](#entity-framework)
   * [Code First](#code-first)
   * [LINQ](#linq)
@@ -61,9 +61,9 @@ DevReady Academy - ASP.NET MVC 5
 * [ASP.NET Core MVC Anchor Tag Helper](https://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx)
 * [TutorialTeacher - Razor](http://www.tutorialsteacher.com/mvc/razor-syntax)
 
-### OMR
+### ORM
 
-#### OMR
+#### ORM
 * [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
 
 #### Entity Framework
