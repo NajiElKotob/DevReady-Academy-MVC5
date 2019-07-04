@@ -43,6 +43,10 @@ DevReady Academy - ASP.NET MVC 5
 * [Professional ASP.NET MVC 5](https://amzn.to/2V9uCB5) - Jon Galloway
 * [Exam Ref 70-486: Developing ASP.NET MVC 4 Web Applications](https://amzn.to/2BG5CZ5) - William Penberthy 
 
+## Tutorials
+* [Getting Started with Entity Framework 6 Code First using MVC 5](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/)
+* [Get Started with ASP.NET Web API 2 (C#)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api)
+
 ## References
 
 ### Routing
