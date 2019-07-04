@@ -4,12 +4,14 @@ DevReady Academy - ASP.NET MVC 5
 ## Table of contents
 * [What is MVC](#what-is-mvc)
 * [Books :star2:](#books)
-* [Razor](#razor)
+* [Tutorials](#tutorials)
 * [Routing](#routing)
-* [Entity Framework](#entity-framework)
-* [Code First](#code-first)
-* [LINQ](#linq)
-* [Repository and UoW](#repository-and-uow)
+* [Razor](#razor)
+* OMR
+  * [Entity Framework](#entity-framework)
+  * [Code First](#code-first)
+  * [LINQ](#linq)
+  * [Repository and UoW](#repository-and-uow)
 * [WebAPI](#webapi)
 * [JSON and XML](#json-and-xml)
 * [jQuery](#jquery)
@@ -58,22 +60,27 @@ DevReady Academy - ASP.NET MVC 5
 * [ASP.NET MVC 3: Razor’s @: and <text> syntax](https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax)
 * [ASP.NET Core MVC Anchor Tag Helper](https://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx)
 * [TutorialTeacher - Razor](http://www.tutorialsteacher.com/mvc/razor-syntax)
-  
-### Entity Framework
+
+### OMR
+
+#### OMR
+* [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
+
+#### Entity Framework
 * [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
 * [EF Migrations Command Reference](https://coding.abel.nu/2012/03/ef-migrations-command-reference/) - Anders Abel
 
 
-### Code First
+#### Code First
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Calling Stored Procedures from Entity Framework Code First](http://www.codedigest.com/posts/31/calling-stored-procedures-from-entity-framework-code-first)
 
 
-### LINQ
+#### LINQ
 * [LINQ Single vs SingleOrDefault vs First vs FirstOrDefault](http://www.technicaloverload.com/linq-single-vs-singleordefault-vs-first-vs-firstordefault/)
 * [Find vs. FirstOrDefault](https://arwsoftware.wordpress.com/2017/02/04/entity-framework-find-vs-firstordefault)
 
-### Repository and UoW
+#### Repository and UoW
 * [Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 * [Unit of Work](https://github.com/Arch/UnitOfWork)
 
