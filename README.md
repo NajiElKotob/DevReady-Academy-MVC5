@@ -67,11 +67,13 @@ DevReady Academy - ASP.NET MVC 5
 * [What is an ORM and Why You Should Use it](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)
 
 #### Entity Framework
-* [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
 * [EF Migrations Command Reference](https://coding.abel.nu/2012/03/ef-migrations-command-reference/) - Anders Abel
+* [ASP.NET MVC 5 with EF 6 - Working With Files](https://www.mikesdotnetting.com/article/259/asp-net-mvc-5-with-ef-6-working-with-files)
 
 
 #### Code First
+* [EF 6 Code First](https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx) - Entity Framework Tutorial
+* [Get Started with Entity Framework 6 Code First using MVC 5](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application) - Microsoft
 * [Use Code First Migrations to Seed the Database](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3)
 * [Calling Stored Procedures from Entity Framework Code First](http://www.codedigest.com/posts/31/calling-stored-procedures-from-entity-framework-code-first)
 
